@@ -9,7 +9,86 @@ Copyright © All rights Reserved
 
 */
 
-$(function() {
+(function ($) {
+
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
+
+    $.fn.visible = function (partial) {
+
+        var $t = $(this),
+            $w = $(window),
+            viewTop = $w.scrollTop(),
+            viewBottom = viewTop + $w.height(),
+            _top = $t.offset().top,
+            _bottom = _top + $t.height(),
+            compareTop = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+    };
+
+})(jQuery);
+
+var win = $(window);
+
+var allMods = $(".module");
+
+allMods.each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+        el.addClass("already-visible");
+    }
+});
+
+win.scroll(function (event) {
+
+    allMods.each(function (i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+            el.addClass("come-in");
+        }
+    });
+
+});
+
+
+$(document).ready(function () {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll(function () {
+
+        /* Check the location of each desired element */
+        $('.hideme').each(function (i) {
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if (bottom_of_window > bottom_of_object) {
+
+                $(this).animate({
+                    'opacity': '1'
+                }, 1500);
+
+            }
+
+        });
+
+    });
+
+});
+
+$(function () {
     "use strict";
 
     /*-----------------------------------
@@ -24,24 +103,24 @@ $(function() {
         }
     }
     menuscroll();
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         menuscroll();
     });
     /*-----------------------------------
      * NAVBAR CLOSE ON CLICK
      *-----------------------------------*/
 
-    $('.navbar-nav > li:not(.dropdown) > a').on('click', function() {
+    $('.navbar-nav > li:not(.dropdown) > a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
     /* 
      * NAVBAR TOGGLE BG
      *-----------------*/
     var siteNav = $('#navbar');
-    siteNav.on('show.bs.collapse', function(e) {
+    siteNav.on('show.bs.collapse', function (e) {
         $(this).parents('.nav-menu').addClass('menu-is-open');
     })
-    siteNav.on('hide.bs.collapse', function(e) {
+    siteNav.on('hide.bs.collapse', function (e) {
         $(this).parents('.nav-menu').removeClass('menu-is-open');
     })
 
@@ -49,7 +128,7 @@ $(function() {
      * ONE PAGE SCROLLING
      *-----------------------------------*/
     // Select all links with hashes
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').on('click', function(event) {
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').on('click', function (event) {
         // On-page links
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             // Figure out element to scroll to
@@ -61,7 +140,7 @@ $(function() {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 1000, function() {
+                }, 1000, function () {
                     // Callback after animation
                     // Must change focus!
                     var $target = $(target);
@@ -110,3 +189,45 @@ $(function() {
     }
 
 }); /* End Fn */
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200); // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200); // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function () { // When arrow is clicked
+    $('body,html').animate({
+        scrollTop: 0 // Scroll to top of body
+    }, 500);
+});
+
+$('.counter').each(function () {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+
+    $({
+        countNum: $this.text()
+    }).animate({
+            countNum: countTo
+        },
+
+        {
+
+            duration: 2000,
+            easing: 'linear',
+            step: function () {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+                $this.text(this.countNum);
+                //alert('finished');
+            }
+
+        });
+
+
+
+});
