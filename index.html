@@ -21,6 +21,9 @@ URI     : https://colorlib.com
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Quicksand:400,700" rel="stylesheet">
 
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Themify Icons -->
@@ -34,9 +37,21 @@ URI     : https://colorlib.com
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <div id='woobox-root'></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://woobox.com/js/plugins/woo.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'woobox-sdk'));
+    </script>
+
     <!-- Return to Top -->
     <a href="javascript:" id="return-to-top">
-        <i class="ti-angle-up "></i>
+        <i class="fa fa-angle-double-up fa-5"></i>
     </a>
     <!-- Nav Menu -->
 
@@ -44,7 +59,7 @@ URI     : https://colorlib.com
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-dark navbar-expand-lg">
+                    <nav class="navbar navbar-light navbar-expand-lg">
                         <a class="navbar-brand" href="index.html">
                             <img src="images/logo.png" style="width: 50px;" class="img-fluid" alt="logo">
                         </a>
@@ -86,35 +101,29 @@ URI     : https://colorlib.com
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
             <h1>My Book Qatar 2018</h1>
-            <p class="tagline">Your one-stop destination for 2 for 1 offers in 🇶🇦. Join today and start saving with more than 1400 offers
-                &amp; 400 outlets.</p>
+            <p class="tagline">Your one-stop destination for 2 for 1 offers in Qatar. Join today and start saving with more than 1400 offers
+                from 400 outlets.</p>
         </div>
         <div class="img-holder mt-3">
             <br>
-            <img src="images/video.gif" width="380" alt="animated" />
+            <img src="images/video-long.gif" width="380" alt="animated" />
         </div>
     </header>
 
-    <div class="client-logos my-5 hideme">
-        <div class="container text-center ">
-            <img src="images/client-logos.jpg " alt="client logos " class="img-fluid ">
-        </div>
-    </div>
+    <div class="section" id="aboutmybook">
 
-    <div class="section " id="aboutmybook">
+        <div class="container">
 
-        <div class="container ">
-
-            <div class="section-title ">
+            <div class="section-title">
                 <h3>What is My Book Qatar?</h3>
             </div>
-            <div class="row ">
-                <div class="col-12 col-lg-4 ">
+            <div class="row">
+                <div class="col-12 col-lg-4">
                     <div class="card features remove-box-shadow">
                         <div class="card-body">
-                            <div class="media ">
+                            <div class="media">
                                 <div class="media-body text-align-center">
-                                    <span class="ti-heart gradient-fill ti-3x mr-3 "></span>
+                                    <span class="fa fa-heart gradient-fill large-size"></span>
                                     <br>
                                     <br>
                                     <h4 class="card-title">Beautiful Lifestyle Guide</h4>
@@ -123,12 +132,12 @@ URI     : https://colorlib.com
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
+                <div class="col-12 col-lg-4">
                     <div class="card features remove-box-shadow">
                         <div class="card-body">
-                            <div class="media ">
+                            <div class="media">
                                 <div class="media-body text-align-center">
-                                    <span class="ti-car gradient-fill ti-3x mr-3 "></span>
+                                    <span class="fa fa-car gradient-fill large-size"></span>
                                     <br>
                                     <br>
                                     <h4 class="card-title">Exciting Travel Guide</h4>
@@ -137,12 +146,12 @@ URI     : https://colorlib.com
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
+                <div class="col-12 col-lg-4">
                     <div class="card features remove-box-shadow">
                         <div class="card-body">
-                            <div class="media ">
+                            <div class="media">
                                 <div class="media-body text-align-center">
-                                    <span class="ti-money gradient-fill ti-3x mr-3 "></span>
+                                    <span class="fa fa-usd gradient-fill large-size"></span>
                                     <br>
                                     <br>
                                     <h4 class="card-title">Crazy Money Saver</h4>
@@ -156,97 +165,52 @@ URI     : https://colorlib.com
 
     </div>
 
-    <div class="section light-bg " id="lovemybook ">
+    <div class="section light-bg" id="lovemybook">
 
-        <div class="container ">
+        <div class="container">
 
-            <div class="section-title ">
+            <div class="section-title">
                 <h3>Why you'll ❤ My Book Qatar!</h3>
             </div>
 
 
-            <div class="row ">
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-arrows-horizontal gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Value for Money</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-money gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Value for Money</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-arrows-horizontal gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Freedom of Choice</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-arrows-horizontal gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Freedom of Choice</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-layout-grid2-thumb gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">1400+ Great Offers</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row ">
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-shine gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Reusable Special Offers</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-world gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Multilingual Support</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-sharethis gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Share to Multiple Devices</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-layout-grid2-thumb gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">1400+ Great Offers</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
@@ -255,43 +219,88 @@ URI     : https://colorlib.com
                 </div>
             </div>
             <br>
-            <div class="row ">
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-search gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Quick Search</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-shine gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Reusable Special Offers</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-map-alt gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Location Map</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-world gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Multilingual Support</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card features ">
-                        <div class="card-body ">
-                            <div class="media ">
-                                <span class="ti-hand-point-up gradient-fill ti-3x mr-3 "></span>
-                                <div class="media-body ">
-                                    <h4 class="card-title ">Simple but Powerful</h4>
-                                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-sharethis gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Share to Multiple Devices</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-search gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Quick Search</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-map-alt gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Location Map</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-hand-point-up gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Simple but Powerful</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     </p>
                                 </div>
                             </div>
@@ -348,7 +357,7 @@ URI     : https://colorlib.com
                 <!-- /number -->
 
                 <!-- number -->
-                <div class="col-sm-3 col-xs-6 ">
+                <div class="col-sm-3 col-xs-6">
                     <div class="number">
                         <h3 class="white-text">
                             <span class="counter" data-count="25">5</span>
@@ -368,16 +377,16 @@ URI     : https://colorlib.com
     <!-- /Numbers -->
     <div class="section" id="ourmerchants">
 
-        <div class="container ">
-            <div class="row ">
-                <div class="col-lg-6 offset-lg-6 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-6">
                     <h2>Discover our 400+ Merchants</h2>
-                    <p class="mb-4 ">Click below to find our 2018's list of merchants and amazing offers.</p>
-                    <a href="https://mybookqatar.github.io/merchants/ " target="_blank " class="btn btn-primary ">Read more</a>
+                    <p class="mb-4">Click below to find our 2018's list of merchants and amazing offers.</p>
+                    <a href="https://mybookqatar.github.io/merchants/" target="_blank" class="btn btn-primary">Read more</a>
                 </div>
             </div>
             <div class="perspective-phone module">
-                <img src="images/chef.png " alt="perspective phone " class="flip-image img-fluid ">
+                <img src="images/chef.png" alt="perspective phone" class="flip-image img-fluid">
             </div>
         </div>
 
@@ -385,29 +394,28 @@ URI     : https://colorlib.com
     <!-- // end .section -->
 
 
-    <div class="section clear-float light-bg ">
-        <div class="container ">
-            <div class="section-title ">
+    <div class="section clear-float light-bg">
+        <div class="container">
+            <div class="section-title">
                 <h3>Our Products</h3>
             </div>
 
-            <ul class="nav nav-tabs nav-justified " role="tablist ">
-                <li class="nav-item ">
-                    <a class="nav-link active " data-toggle="tab " href="#book ">Printed Book</a>
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#app">Mobile App</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link " data-toggle="tab " href="#app ">Mobile App</a>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#book">Printed Book</a>
                 </li>
             </ul>
-            <div class="tab-content ">
-                <div class="tab-pane fade show active " id="book ">
-                    <div class="d-flex flex-column flex-lg-row ">
-                        <img src="images/book.png " alt="graphic " class="img-fluid rounded align-self-start mr-lg-5 mb-5
-                mb-lg-0 ">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="app">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="images/app.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5
+                            mb-lg-0">
                         <div>
-
-                            <h2>My Book 2018 Printed Book</h2>
-                            <p class="lead ">Big book filled with even bigger coupons</p>
+                            <h2>My Book 2018 Mobile App</h2>
+                            <p class="lead">Small and simple yet portable and powerful</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                 pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
                                 mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar
@@ -421,11 +429,13 @@ URI     : https://colorlib.com
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade " id="app ">
-                    <div class="d-flex flex-column flex-lg-row ">
+                <div class="tab-pane fade" id="book">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="images/book.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5
+                            mb-lg-0">
                         <div>
-                            <h2>My Book 2018 Mobile App</h2>
-                            <p class="lead ">Small and simple yet portable and powerful</p>
+                            <h2>My Book 2018 Printed Book</h2>
+                            <p class="lead">Big book filled with even bigger coupons</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                 pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
                                 mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar
@@ -437,8 +447,7 @@ URI     : https://colorlib.com
                                 id turpis. Proin aliquet vulputate aliquam.
                             </p>
                         </div>
-                        <img src="images/app.png " alt="graphic " class="img-fluid rounded align-self-start mr-lg-5 mb-5
-                mb-lg-0 ">
+
                     </div>
                 </div>
             </div>
@@ -449,34 +458,34 @@ URI     : https://colorlib.com
     <!-- // end .section -->
 
 
-    <div class="section white-bg ">
-        <div class="section-title ">
+    <div class="section white-bg">
+        <div class="section-title">
             <h3>How to Use My Book App?</h3>
         </div>
-        <div class="container ">
-            <div class="row ">
-                <div class="col-md-8 d-flex align-items-center ">
-                    <ul class="list-unstyled ui-steps ">
-                        <li class="media " onmouseover="javascript:$( '#my_image').attr( 'src', 'images/appstore.png');; ">
-                            <div class="circle-icon mr-4 ">1</div>
-                            <div class="media-body ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 d-flex align-items-center">
+                    <ul class="list-unstyled ui-steps">
+                        <li class="media" onmouseover="javascript:$( '#my_image').attr( 'src', 'images/appstore.png');;">
+                            <div class="circle-icon mr-4">1</div>
+                            <div class="media-body">
                                 <h5>Download My Book App</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     pretium obcaecati vel exercitationem </p>
                             </div>
                         </li>
-                        <li class="media my-4 " onmouseover="javascript:$( '#my_image').attr( 'src',
-                'images/appstore.png');; ">
-                            <div class="circle-icon mr-4 ">2</div>
-                            <div class="media-body ">
+                        <li class="media my-4" onmouseover="javascript:$( '#my_image').attr( 'src',
+                'images/mybookstore.png');;">
+                            <div class="circle-icon mr-4">2</div>
+                            <div class="media-body">
                                 <h5>Buy My Book VIP Key</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     pretium obcaecati vel exercitationem eveniet</p>
                             </div>
                         </li>
-                        <li class="media " onmouseover="javascript:$( '#my_image').attr( 'src', 'images/vipscreen.png');; ">
-                            <div class="circle-icon mr-4 ">3</div>
-                            <div class="media-body ">
+                        <li class="media" onmouseover="javascript:$( '#my_image').attr( 'src', 'images/vipscreen.png');;">
+                            <div class="circle-icon mr-4">3</div>
+                            <div class="media-body">
                                 <h5>Save VIP Key and Start Saving!</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
                                     pretium obcaecati vel exercitationem </p>
@@ -484,8 +493,8 @@ URI     : https://colorlib.com
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4 ">
-                    <img src="images/appstore.png " id="my_image " alt="Screenshot " class="img-fluid ">
+                <div class="col-md-4">
+                    <img src="images/appstore.png" id="my_image" alt="Screenshot" class="img-fluid">
                 </div>
 
             </div>
@@ -496,37 +505,37 @@ URI     : https://colorlib.com
     <!-- // end .section -->
 
 
-    <div class="section light-bg ">
-        <div class="container ">
-            <div class="section-title ">
+    <div class="section light-bg">
+        <div class="container">
+            <div class="section-title">
                 <h3>What Our Users Say</h3>
             </div>
 
-            <div class="testimonials owl-carousel ">
-                <div class="testimonials-single ">
-                    <img src="images/client.png " alt="client " class="client-img ">
-                    <blockquote class="blockquote ">Great application vs book, contains alot of places to utilize buy one and get one free, also with updated
+            <div class="testimonials owl-carousel">
+                <div class="testimonials-single">
+                    <img src="images/client.png" alt="client" class="client-img">
+                    <blockquote class="blockquote">Great application vs book, contains alot of places to utilize buy one and get one free, also with updated
                         offers throughout the year, compared to the price you will save it's price from the first use, imagine
                         how much you will save throughout the year, better price than others..Easy to use</blockquote>
-                    <h5 class="mt-4 mb-2 ">Mohmad Ramadan</h5>
-                    <a href="https://www.facebook.com/mhmad.tillawy/posts/10215217430572084 " class="text-primary ">Facebook Page Reviews</a>
+                    <h5 class="mt-4 mb-2">Mohmad Ramadan</h5>
+                    <a href="https://www.facebook.com/mhmad.tillawy/posts/10215217430572084" class="text-primary">Facebook Page Reviews</a>
 
                 </div>
-                <div class="testimonials-single ">
-                    <img src="images/client.png " alt="client " class="client-img ">
-                    <blockquote class="blockquote ">The price is much worth the value you get from it. You really start saving once you try it. Suggest to
+                <div class="testimonials-single">
+                    <img src="images/client.png" alt="client" class="client-img">
+                    <blockquote class="blockquote">The price is much worth the value you get from it. You really start saving once you try it. Suggest to
                         try it to everyone. As for me i use it with my friends a lot and have saved lots last year.
                     </blockquote>
-                    <h5 class="mt-4 mb-2 ">Darya Bakriy</h5>
-                    <a href="https://www.facebook.com/darya.prinsses/posts/1822155827835067 " class="text-primary ">Facebook Page Reviews</a>
+                    <h5 class="mt-4 mb-2">Darya Bakriy</h5>
+                    <a href="https://www.facebook.com/darya.prinsses/posts/1822155827835067" class="text-primary">Facebook Page Reviews</a>
                 </div>
-                <div class="testimonials-single ">
-                    <img src="images/client.png " alt="client " class="client-img ">
-                    <blockquote class="blockquote ">My book Qatar simply made for people, which are living in Qatar.
+                <div class="testimonials-single">
+                    <img src="images/client.png" alt="client" class="client-img">
+                    <blockquote class="blockquote">My book Qatar simply made for people, which are living in Qatar.
                         <br> Enjoy, Redeem and save to make outgoing activities more beautiful.
                     </blockquote>
-                    <h5 class="mt-4 mb-2 ">Hatem Omar</h5>
-                    <a href="https://www.facebook.com/hatemo/posts/10155262988816911 " class="text-primary ">Facebook Page Reviews</a>
+                    <h5 class="mt-4 mb-2">Hatem Omar</h5>
+                    <a href="https://www.facebook.com/hatemo/posts/10155262988816911" class="text-primary">Facebook Page Reviews</a>
                 </div>
             </div>
 
@@ -535,45 +544,45 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-    <div class="section " id="pricing ">
-        <div class="container ">
-            <div class="section-title ">
+    <div class="section" id="pricing">
+        <div class="container">
+            <div class="section-title">
                 <h3>Buy My Book Today (30% OFF)</h3>
             </div>
 
-            <div class="card-deck ">
-                <div class="card pricing ">
-                    <div class="card-head ">
-                        <div class="text-primary large-text ">Printed Book</div>
-                        <span class="price ">QR 200
-                            <sub>
-                                <del>290</del>
-                            </sub>
-                        </span>
-                    </div>
-                    <ul class="list-group list-group-flush ">
-                        <div class="list-group-item ">Easy to Redeem &amp; Share</div>
-                        <div class="list-group-item ">No Internet Needed</div>
-                    </ul>
-                    <div class="card-body ">
-                        <a href="tel:+97444814276 " class="btn btn-primary btn-lg btn-block ">Click to Call Us to Buy</a>
-                    </div>
-                </div>
-                <div class="card pricing popular ">
-                    <div class="card-head ">
-                        <div class="text-primary large-text ">Mobile App (VIP Key)</div>
-                        <span class="price ">QR 175
+            <div class="card-deck">
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <div class="text-primary large-text">Mobile App (VIP Key)</div>
+                        <span class="price">QR 175
                             <sub>
                                 <del>250</del>
                             </sub>
                         </span>
                     </div>
-                    <ul class="list-group list-group-flush ">
-                        <div class="list-group-item ">Portable and Simple to Use</div>
-                        <div class="list-group-item ">Multiple Devices Support</div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Portable and Simple to Use</div>
+                        <div class="list-group-item">Multiple Devices Support</div>
                     </ul>
-                    <div class="card-body ">
-                        <a href="#downloadapp " class="btn btn-primary btn-lg btn-block ">Click to Find More Info</a>
+                    <div class="card-body">
+                        <a href="#downloadapp" class="btn btn-primary btn-lg btn-block">Click to Find More Info</a>
+                    </div>
+                </div>
+                <div class="card pricing">
+                    <div class="card-head">
+                        <div class="text-primary large-text">Printed Book</div>
+                        <span class="price">QR 200
+                            <sub>
+                                <del>290</del>
+                            </sub>
+                        </span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Easy to Redeem &amp; Share</div>
+                        <div class="list-group-item">No Internet Needed</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="tel:+97444814276" class="btn btn-primary btn-lg btn-block">Click to Call Us to Buy</a>
                     </div>
                 </div>
             </div>
@@ -586,37 +595,37 @@ URI     : https://colorlib.com
     <!-- // end .section -->
 
 
-    <div class="section pt-0 ">
-        <div class="container ">
-            <div class="section-title ">
+    <div class="section pt-0">
+        <div class="container">
+            <div class="section-title">
                 <h3>Frequently Asked Questions</h3>
             </div>
 
-            <div class="row pt-4 ">
-                <div class="col-md-6 ">
-                    <h4 class="mb-3 ">How does My Book work?</h4>
-                    <p class="light-font mb-5 ">
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <h4 class="mb-3">How does My Book work?</h4>
+                    <p class="light-font mb-5">
                         Printed Book: All you have to do is to choose an offer, tear it out and present it for redemption when you ask for your bill.
                         Mobile App: You choose the offer on your smartphone, tap the offer, show it to the waiter when you
                         ask for your bill, and follow the process to redeem it.
                     </p>
-                    <h4 class="mb-3 ">How many offers are available in a My Book product?</h4>
-                    <p class="light-font mb-5 ">Each of our products contain more than 1400 Buy One Get One Free offers. You can view further details
+                    <h4 class="mb-3">How many offers are available in a My Book product?</h4>
+                    <p class="light-font mb-5">Each of our products contain more than 1400 Buy One Get One Free offers. You can view further details
                         for our product on the product pages. Please click here to view all our offers.</p>
 
                 </div>
-                <div class="col-md-6 ">
-                    <h4 class="mb-3 ">Is My Book Printed book and Mobile app same?</h4>
-                    <p class="light-font mb-5 ">A mobile product on My Book App contains all of the offers that are available in the printed book. However,
+                <div class="col-md-6">
+                    <h4 class="mb-3">Is My Book Printed book and Mobile app same?</h4>
+                    <p class="light-font mb-5">A mobile product on My Book App contains all of the offers that are available in the printed book. However,
                         we continue to add new merchants and special offers to My Book App throughout the year. The mobile
                         products are also priced lower than the printed books. </p>
-                    <h4 class="mb-3 ">Where can I purchase a My Book product?</h4>
-                    <p class="light-font mb-5 ">You can purchase My Book products using our Store inside My Book App, from our office, or from one of
+                    <h4 class="mb-3">Where can I purchase a My Book product?</h4>
+                    <p class="light-font mb-5">You can purchase My Book products using our Store inside My Book App, from our office, or from one of
                         our retailers as mentioned on our Facebook and Instagram page. </p>
 
                 </div>
             </div>
-            <a href="https://www.facebook.com/MyBookQatar/app/407853752679163/ " target="_blank " class="btn btn-primary ">Read more</a>
+            <a href="https://www.facebook.com/MyBookQatar/app/407853752679163/" target="_blank" class="btn btn-primary">Read more</a>
         </div>
 
     </div>
@@ -624,19 +633,19 @@ URI     : https://colorlib.com
 
 
 
-    <div class="section bg-gradient " id="downloadapp ">
-        <div class="container ">
-            <div class="call-to-action ">
+    <div class="section bg-gradient" id="downloadapp">
+        <div class="container">
+            <div class="call-to-action">
                 <h2>Download our App for Free</h2>
-                <p class="tagline ">Available for both iOS and Android platforms.</p>
-                <div class="my-4 ">
+                <p class="tagline">Available for both iOS and Android platforms.</p>
+                <div class="my-4">
 
-                    <a href="https://itunes.apple.com/mz/app/mybook-qatar/id978034937?mt=8 " class="btn btn-light ">
-                        <img src="images/appleicon.png " alt="icon "> App Store</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.tedmob.mybook " class="btn btn-light ">
-                        <img src="images/playicon.png " alt="icon "> Google play</a>
+                    <a href="https://itunes.apple.com/mz/app/mybook-qatar/id978034937?mt=8" class="btn btn-light">
+                        <img src="images/appleicon.png" alt="icon"> App Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tedmob.mybook" class="btn btn-light">
+                        <img src="images/playicon.png" alt="icon"> Google play</a>
                 </div>
-                <p class="nav-link ">
+                <p class="nav-link">
                     <small>
                         <i>*Works on iOS 10.0 or later, Android 4.1 and up. </i>
                     </small>
@@ -647,157 +656,85 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-    <div class="light-bg py-5 " id="contact ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col-lg-6 text-center text-lg-left ">
-                    <p class="mb-2 ">
-                        <span class="ti-location-pin mr-2 "></span>Retaj Building, 3rd Floor, Office #311, Al Sadd, Doha- Qatar
-                    </p>
-                    <div class=" d-block d-sm-inline-block ">
-                        <p class="mb-2 ">
-                            <span class="ti-email mr-2 "></span>
-                            <a class="mr-4 " href="mailto:marketing@mybookqatar.com ">marketing@mybookqatar.com</a>
-                        </p>
-                    </div>
-                    <div class="d-block d-sm-inline-block ">
-                        <p class="mb-0 ">
-                            <span class="ti-headphone-alt mr-2 "></span>
-                            <a href="tel:+97444814276 ">+974 44814276</a>
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col-lg-6 ">
-                    <div class="social-icons ">
-                        <a href="https://www.facebook.com/MyBookQatar/ ">
-                            <span class="ti-facebook "></span>
-                        </a>
-                        <a href="https://www.instagram.com/mybookqatar/ ">
-                            <span class="ti-instagram "></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Contact -->
-    <div id="contact" class="section md-padding">
-
-        <!-- Container -->
-        <div class="container">
-
-            <div class="section-header text-center">
-                <h2 class="title">Get in touch</h2>
-            </div>
-            <!-- /Section-header -->
-            <!-- Row -->
-            <div class="row">
-
-                <!-- Section-header -->
-
-
-                <!-- contact -->
-                <div class="col-sm-4">
-                    <div class="contact">
-                        <i class="ti-money"></i>
-                        <h4>Phone</h4>
-                        <p>512-421-3940</p>
-                    </div>
-                </div>
-                <!-- /contact -->
-
-                <!-- contact -->
-                <div class="col-sm-4">
-                    <div class="contact">
-                        <i class="ti-money"></i>
-                        <h4>Email</h4>
-                        <p>email@support.com</p>
-                    </div>
-                </div>
-                <!-- /contact -->
-
-                <!-- contact -->
-                <div class="col-sm-4">
-                    <div class="contact">
-                        <i class="ti-money"></i>
-                        <h4>Address</h4>
-                        <p>1739 Bubby Drive</p>
-                    </div>
-                </div>
-                <!-- /contact -->
-
-            </div>
-            <!-- /Row -->
-
-
-            <!-- contact form -->
-            <div class="col-md-8 col-md-offset-2 margin-auto">
-                <form class="contact-form">
-                    <input type="text" class="input" placeholder="Name">
-                    <input type="email" class="input" placeholder="Email">
-                    <input type="text" class="input" placeholder="Subject">
-                    <textarea class="input" placeholder="Message"></textarea>
-                    <button class="main-btn">Send message</button>
-                </form>
-            </div>
-            <!-- /contact form -->
-        </div>
-        <!-- /Container -->
-
-    </div>
-    <!-- /Contact -->
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7715816052682!2d51.49131591489316!3d25.27826823461008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dae9dd8323b1%3A0x14cf48ef7501d745!2sMY+BOOK+QATAR!5e0!3m2!1sen!2sqa!4v1525170529083 "
-        width="100% " height="500 " frameborder="0 " style="border:0 " allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7715816052682!2d51.49131591489316!3d25.27826823461008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dae9dd8323b1%3A0x14cf48ef7501d745!2sMY+BOOK+QATAR!5e0!3m2!1sen!2sqa!4v1525170529083"
+        width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 
     <!-- // end .section -->
-    <footer class="my-5 text-center ">
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" class="email-input-area">
-            <form action="https://mybookqatar.us15.list-manage.com/subscribe/post?u=419643694b92f599a0eddb2ff&amp;id=386175c40a" method="post"
-                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
 
-                    <input type="email" value="" name="EMAIL" class="email-input" id="mce-EMAIL" placeholder="Enter your email" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_419643694b92f599a0eddb2ff_386175c40a" tabindex="-1" value="">
-                    </div>
-                    <div class="clear">
-                        <input type="submit" value="NOTIFY ME" name="subscribe" id="mc-embedded-subscribe" class="submit-btn">
+    <!---->
+    <div class="section" id="contact" class="section-padding wow fadeInUp delay-05s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center white">
+                    <h2 class="service-title pad-bt15">Get in touch</h2>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="loction-info white">
+                        <p>
+                            <i class="fa fa-phone fa-fw fa-2x"></i>
+                            <a href="tel:+97444814276">+974 44814276</a> /
+                            <a href="https://api.whatsapp.com/send?phone=0097450907270">+974 50907270</a>
+                        </p>
+
+                        <p>
+                            <i class="fa fa-envelope fa-fw fa-2x"></i>
+                            <a class="mr-4" href="mailto:marketing@mybookqatar.com">marketing@mybookqatar.com</a>
+                        </p>
+
+                        <p>
+                            <i class="fa fa-map-marker fa-fw fa-2x"></i>
+                            <a class="mr-4" href="https://goo.gl/maps/GrMkCuKnyoQ2">Retaj Building, 3rd Floor, Office #311, Al Sadd, Doha- Qatar</a>
+                        </p>
+
+                        <p>
+                            <i class="fa fa-facebook fa-fw fa-2x"></i>
+                            <a href="https://www.facebook.com/MyBookQatar/">@mybookqatar</a> &nbsp;
+                            <i class="fa fa-instagram fa-fw fa-2x"></i>
+                            <a href="https://www.instagram.com/mybookqatar/">@mybookqatar</a>
+                        </p>
                     </div>
                 </div>
-            </form>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-form">
+                        <div class='woobox-offer' data-offer='pg54ip'></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--End mc_embed_signup-->
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2 ">
-            <small>COPYRIGHT &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>. MY BOOK QATAR. ALL RIGHTS RESERVED.
-                <br> THEME FROM
-                <a href="https://colorlib.com ">COLORLIB</a>
-            </small>
-        </p>
+    </div>
+    <!---->
+    <!---->
+    <div class="section light-bg" id="footer" class="section-padding wow fadeInUp delay-05s">
+        <div class="container">
+            <footer class="my-5 text-center">
+                <p class="mb-2">
 
-        <small>
-            <a href="# " class="m-2 ">PRESS</a>
-            <a href="# " class="m-2 ">TERMS</a>
-            <a href="# " class="m-2 ">PRIVACY</a>
-        </small>
-    </footer>
+                    <small>COPYRIGHT &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>. MY BOOK QATAR. ALL RIGHTS RESERVED. THEME FROM
+                        <a href="https://colorlib.com">COLORLIB</a>
+                    </small>
+                </p>
+                <small>
+                    <a href="#" class="m-2">PRESS</a>
+                    <a href="#" class="m-2">TERMS</a>
+                    <a href="#" class="m-2">PRIVACY</a>
+                </small>
+            </footer>
+            <!---->
+        </div>
+    </div>
+
 
     <!-- jQuery and Bootstrap -->
-    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Plugins JS -->
-    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
-    <script src="js/script.js "></script>
+    <script src="js/script.js"></script>
 
 </body>
 

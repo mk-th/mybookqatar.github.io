@@ -228,6 +228,4 @@ $('.counter').each(function () {
 
         });
 
-
-
 });

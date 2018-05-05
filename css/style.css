@@ -215,8 +215,8 @@ a.text-primary:hover {
 /* NAVBAR
 ----------------------*/
 
-.nav-link {
-    color: #fff !important;
+.nav-menu .nav-link {
+    color: #000 !important;
 }
 
 .nav-menu {
@@ -224,13 +224,20 @@ a.text-primary:hover {
     transition: all 0.3s ease;
 }
 
-.nav-menu.is-scrolling,
+/* .nav-menu.is-scrolling,
 .nav-menu.menu-is-open {
     background-color: #7e009e;
     background-image: -moz-linear-gradient( 90deg, #7e009e 0%, #009790 100%);
     background-image: -webkit-linear-gradient( 90deg, #7e009e 0%, #009790 100%);
     background-image: -ms-linear-gradient( 90deg, #7e009e 0%, #009790 100%);
     background-image: linear-gradient( 90deg, #7e009e 0%, #009790 100%);
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+} */
+
+.nav-menu {
+    background-color: #fff;
     -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
@@ -486,7 +493,7 @@ header {
     padding: 1rem 1rem;
     border-color: #faf6fb #faf6fb #fff;
     font-size: 22px;
-    color: #b5a4c8;
+    color: #fff;
     background: #00a098;
 }
 
@@ -770,7 +777,7 @@ h3 {
     position: relative;
     left: 16px;
     top: 13px;
-    font-size: 19px;
+    font-size: 24px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -794,11 +801,6 @@ h3 {
 #mc-embedded-subscribe {
     border: 0;
     box-shadow: none;
-}
-
-.submit-btn,
-.email-input {
-    font-family: 'Quicksand', sans-serif;
 }
 
 .margin-bottom-sm {
@@ -833,15 +835,22 @@ h3 {
     text-align: center;
 }
 
-.contact i {
+#contact i {
     font-size: 36px;
-    color: #6195FF;
+    color: #00a098;
+    background-image: -moz-linear-gradient( 90deg, #8f31a7 0%, #00a098 100%);
+    background-image: -webkit-linear-gradient( 90deg, #8f31a7 0%, #00a098 100%);
+    background-image: -ms-linear-gradient( 90deg, #8f31a7 0%, #00a098 100%);
+    background-image: linear-gradient( 90deg, #8f31a7 0%, #00a098 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
 .contact-form {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0 !important;
 }
 
 .contact-form .input {
@@ -873,14 +882,14 @@ h3 {
 
 /* --  Input  -- */
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="date"],
-input[type="url"],
-input[type="tel"],
-textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="password"],
+.contact-form input[type="number"],
+.contact-form input[type="date"],
+.contact-form input[type="url"],
+.contact-form input[type="tel"],
+.contact-form textarea {
     height: 40px;
     width: 100%;
     border: none;
@@ -893,22 +902,23 @@ textarea {
     transition: 0.2s border-color, 0.2s opacity;
 }
 
-textarea {
+.contact-form textarea {
     padding: 10px 10px;
     min-height: 80px;
     resize: vertical;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-input[type="url"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    border-color: #6195FF;
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="password"]:focus,
+.contact-form input[type="number"]:focus,
+.contact-form input[type="date"]:focus,
+.contact-form input[type="url"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
     opacity: 1;
+    outline: none !important;
+    border-bottom: 2px solid #8f31a7;
 }
 
 /* --  Buttons  -- */
@@ -926,7 +936,12 @@ textarea:focus {
 }
 
 .main-btn {
-    background: #6195FF;
+    background-color: #8f31a7;
+    background-image: -moz-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%);
+    background-image: -webkit-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%);
+    background-image: -ms-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%);
+    background-image: linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.05);
     color: #FFF;
 }
 
@@ -943,4 +958,202 @@ textarea:focus {
 
 .margin-auto {
     margin: 0 auto;
+}
+
+.btn-outline-light {
+    color: #000;
+    background-color: transparent;
+    background-image: none;
+    border-color: #000;
+}
+
+.btn-outline-light:hover {
+    color: #fff;
+    background-color: #000;
+    background-image: none;
+    border-color: #000;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-menu {
+    padding: 10px;
+}
+
+#ourmerchants,
+#contact {
+    padding-bottom: 0;
+}
+
+#downloadapp .nav-link {
+    color: #fff;
+}
+
+.large-size {
+    font-size: 3em;
+}
+
+.submit-btn,
+.email-input {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.my-5 {
+    margin: 0 !important;
+}
+
+/* asas */
+
+.component-form {
+    text-align: center !important;
+    margin-top: 40px !important;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.component-form .input {
+    margin-bottom: 20px !important;
+}
+
+.component-form .input:nth-child(1),
+.component-form .input:nth-child(2) {
+    width: 100% !important;
+}
+
+.component-form .input:nth-child(2) {
+    margin-left: 15px !important;
+}
+
+.text-center .title:after {
+    margin: 20px auto 0px !important;
+}
+
+@media only screen and (max-width: 480px) {
+    .component-form .input:nth-child(1),
+    .component-form .input:nth-child(2) {
+        width: 100% !important;
+    }
+    .component-form .input:nth-child(2) {
+        margin-left: 0px !important;
+    }
+}
+
+/* --  Input  -- */
+
+.component-form input[type="text"],
+.component-form input[type="email"],
+.component-form input[type="password"],
+.component-form input[type="number"],
+.component-form input[type="date"],
+.component-form input[type="url"],
+.component-form input[type="tel"],
+.component-form textarea {
+    height: 40px !important;
+    width: 100% !important;
+    border: none !important;
+    background: #F4F4F4 !important;
+    border-bottom: 2px solid #EEE !important;
+    color: #354052 !important;
+    padding: 0px 10px !important;
+    opacity: 0.5 !important;
+    -webkit-transition: 0.2s border-color, 0.2s opacity !important;
+    transition: 0.2s border-color, 0.2s opacity !important;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px !important;
+}
+
+.component-form textarea {
+    padding: 10px 10px !important;
+    min-height: 80px !important;
+    resize: vertical !important;
+}
+
+.component-form input[type="text"]:focus,
+.component-form input[type="email"]:focus,
+.component-form input[type="password"]:focus,
+.component-form input[type="number"]:focus,
+.component-form input[type="date"]:focus,
+.component-form input[type="url"]:focus,
+.component-form input[type="tel"]:focus,
+.component-form textarea:focus {
+    opacity: 1 !important;
+    outline: none !important;
+    border-bottom: 2px solid #8f31a7 !important;
+}
+
+/* --  Buttons  -- */
+
+.form-button,
+#actionbutton {
+    display: inline-block !important;
+    padding: 10px 35px !important;
+    margin: 3px !important;
+    border: 2px solid transparent !important;
+    border-radius: 3px !important;
+    -webkit-transition: 0.2s opacity !important;
+    transition: 0.2s opacity !important;
+    background-color: #8f31a7 !important;
+    background-image: -moz-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%) !important;
+    background-image: -webkit-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%) !important;
+    background-image: -ms-linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%) !important;
+    background-image: linear-gradient( 122deg, #7e009e 0%, #8f31a7 100%) !important;
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.05) !important;
+    color: #FFF !important;
+    width: 200px !important;
+    height: 40px !important;
+    text-shadow: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px !important;
+}
+
+.form-button:hover {
+    opacity: 0.8 !important;
+}
+
+.poweredby,
+.disclaimer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.input-label,
+#page-component-5ekl1,
+#page-component-2vqe3 {
+    display: none !important;
+}
+
+.woobox-offer {
+    max-width: 100% !important;
+    height: 450px;
+    overflow: hidden !important;
+    margin: auto;
+}
+
+.page-component .input-group .inputs,
+.vex .input-group .inputs {
+    width: 100% !important;
+}
+
+.type-like,
+.type-instagramfollow {
+    width: 300px !important;
+    text-align: left;
+}
+
+#page-container .footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.component-form {
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
