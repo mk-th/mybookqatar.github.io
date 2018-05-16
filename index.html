@@ -98,7 +98,31 @@ URI     : https://colorlib.com
     </div>
 
 
-    <header class="bg-gradient" id="home">
+    <header class="nav-gradient" id="home">
+        <div id="divVideo">
+            <video autoplay loop muted playsinline class="banner__video" poster="https://pawelgrzybek.com/photos/2015-12-06-codepen.jpg">
+                <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.webm" type="video/webm"> -->
+                <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4" type="video/mp4"> -->
+                <source src="videos/test-landscape.webm" type="video/webm">
+                <source src="videos/test-landscape.mp4" type="video/mp4">
+            </video>
+            <script>
+                if ($(window).width() <= 991) {
+                    var videoFile = 'videos/test-portrait.webm';
+                    $('#divVideo video source').attr('src', videoFile);
+                    $("#divVideo video")[0].load();
+                    $("#divVideo video")[0].play();
+                }
+
+                if ($(window).width() >= 992) {
+                    var videoFile = 'videos/test-landscape.webm';
+                    // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
+                    $('#divVideo video source').attr('src', videoFile);
+                    $("#divVideo video")[0].load();
+                    $("#divVideo video")[0].play();
+                }
+            </script>
+        </div>
         <div class="container mt-5">
             <h1>My Book Qatar 2018</h1>
             <p class="tagline">Your one-stop destination for 2 for 1 offers in Qatar. Join today and start saving with more than 1400 offers
@@ -110,14 +134,106 @@ URI     : https://colorlib.com
         </div>
     </header>
 
-    <div class="section" id="aboutmybook">
-
+    <div class="section white-bg" id="aboutmybook">
         <div class="container">
 
             <div class="section-title">
                 <h3>What is My Book Qatar?</h3>
             </div>
+
             <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow width-md margin-right-sm">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/1.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">A lifestyle
+                                        <br>guide</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/2.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">A way to go out
+                                        <br>more often</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/3.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">An encouragement
+                                        <br>to try new things</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/4.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">An incentive to
+                                        <br>explore the best
+                                        <br>of Qatar</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/5.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">The best way to
+                                        <br>learn about
+                                        <br>new places</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features remove-box-shadow">
+                        <div class="card-body">
+                            <div class="media">
+                                <img src="images/6.png" width="65px" alt="client" class="client-img">
+                                <div class="media-body">
+                                    <h4 class="card-title margin-black">A way to
+                                        <br>save money</h4>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="card features remove-box-shadow">
                         <div class="card-body">
@@ -160,7 +276,7 @@ URI     : https://colorlib.com
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -176,13 +292,14 @@ URI     : https://colorlib.com
 
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-money gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Value for Money</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">Spending as low as QR 175, you can unlock over 1400 offers from 400+ merchants and save
+                                        up to 350000
                                     </p>
                                 </div>
                             </div>
@@ -190,13 +307,14 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-arrows-horizontal gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Freedom of Choice</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">With My Book, you have the freedom to choose between Mobile App (iOS and Android) or
+                                        Printed Book
                                     </p>
                                 </div>
                             </div>
@@ -204,13 +322,15 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-layout-grid2-thumb gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">1400+ Great Offers</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">The 2018 edition brings NEW offers and even more merchants and we add more throughout
+                                        the year.
+                                        <!-- My Book is filled with outlets &amp; offers you care about and we keep adding more throughout the year. -->
                                     </p>
                                 </div>
                             </div>
@@ -221,13 +341,14 @@ URI     : https://colorlib.com
             <br>
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-shine gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Reusable Special Offers</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">We offer Special Offers that can be used unlimited times during its validity period.
+                                        Unlimited savings!
                                     </p>
                                 </div>
                             </div>
@@ -235,13 +356,14 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-world gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Multilingual Support</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">Both our Mobile App and Printed Book support both English and Arabic language. والله
+                                        ، هذا رائع
                                     </p>
                                 </div>
                             </div>
@@ -249,13 +371,14 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-sharethis gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Share to Multiple Devices</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">You are able to share both My Book Printed Book and Mobile App offers with your friends
+                                        and family!
                                     </p>
                                 </div>
                             </div>
@@ -266,13 +389,14 @@ URI     : https://colorlib.com
             <br>
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-search gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Quick Search</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">With our easy to search feature, you're able to quickly find all the offers you care
+                                        about
                                     </p>
                                 </div>
                             </div>
@@ -280,13 +404,14 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-map-alt gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Location Map</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">Discover nearby merchants and their driving directions with our state-of-the-art Location
+                                        Map feature
                                     </p>
                                 </div>
                             </div>
@@ -294,13 +419,13 @@ URI     : https://colorlib.com
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <div class="card features">
+                    <div class="gradient">
                         <div class="card-body">
                             <div class="media">
                                 <span class="ti-hand-point-up gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Simple but Powerful</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
+                                    <p class="card-text">We value user experience and functionality and want you to have an amazing saving experience!
                                     </p>
                                 </div>
                             </div>
@@ -318,53 +443,70 @@ URI     : https://colorlib.com
     <!-- Numbers -->
     <div id="numbers" class="section bg-gradient sm-padding">
         <!-- Container -->
-        <div class="container">
+        <div class="container-fluid">
 
             <!-- Row -->
-            <div class="row text-align-center">
+            <div class="row">
 
                 <!-- number -->
-                <div class="col-sm-3 col-xs-6 margin-bottom-sm">
-                    <div class="number">
-                        <h3 class="white-text">
-                            <span class="counter" data-count="426">400</span>
+                <div class="col-md-2 col-md-offset-3 margin-bottom-sm">
+                    <div class="text-align-left float-left margin-right-sm">
+                        <img src="images/offers_icon.png" alt="client" class="client-img">
+                    </div>
+                    <div class="number text-align-left float-left">
+                        <strong class="white-text">More than</strong>
+                        <h3 class="white-text margin-0">
+                            <span class="counter" data-count="1400">1300</span>
                         </h3>
-                        <span class="white-text">Merchants</span>
+                        <strong class="white-text">Offers!</strong>
                     </div>
                 </div>
                 <!-- /number -->
 
                 <!-- number -->
-                <div class="col-sm-3 col-xs-6 margin-bottom-sm">
-                    <div class="number">
-                        <h3 class="white-text">
-                            <span class="counter" data-count="1435">1400</span>
+                <div class="col-md-2 margin-bottom-sm">
+                    <div class="text-align-left float-left margin-right-sm">
+                        <img src="images/outlets_icon.png" alt="client" class="client-img">
+                    </div>
+                    <div class="number text-align-left float-left">
+                        <strong class="white-text">From over</strong>
+                        <h3 class="white-text margin-0">
+                            <span class="counter" data-count="400">300</span>
                         </h3>
-                        <span class="white-text">2 for 1 Offers</span>
+                        <strong class="white-text">Outlets!</strong>
                     </div>
                 </div>
                 <!-- /number -->
 
                 <!-- number -->
-                <div class="col-sm-3 col-xs-6 margin-bottom-sm">
+                <div class="col-md-3 margin-bottom-sm">
+                    <div class="text-align-left float-left margin-right-sm margin-right-5">
+                        <img src="images/savings_icon.png" alt="client" class="client-img">
+                    </div>
+                    <div class="number text-align-left float-left">
+                        <strong class="white-text margin-left-7">More than</strong>
+                        <div>
+                            <div class="rotate-left">QR</div>
+                            <div class="float-left">
+                                <h3 class="white-text margin-0">
+                                    <span class="counter" data-count="350000">300000</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <strong class="white-text margin-left-7">Savings!</strong>
+                    </div>
+                </div>
+                <!-- /number -->
+
+                <!-- number -->
+                <!-- <div class="col-sm-3 col-xs-6 margin-bottom-sm">
                     <div class="number">
                         <h3 class="white-text">
                             <span class="counter" data-count="226">200</span>
                         </h3>
                         <span class="white-text">Food &amp; Drinks</span>
                     </div>
-                </div>
-                <!-- /number -->
-
-                <!-- number -->
-                <div class="col-sm-3 col-xs-6">
-                    <div class="number">
-                        <h3 class="white-text">
-                            <span class="counter" data-count="25">5</span>
-                        </h3>
-                        <span class="white-text">Special Offers</span>
-                    </div>
-                </div>
+                </div> -->
                 <!-- /number -->
 
             </div>
@@ -375,17 +517,17 @@ URI     : https://colorlib.com
 
     </div>
     <!-- /Numbers -->
-    <div class="section" id="ourmerchants">
+    <div class="section white-bg" id="ourmerchants">
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 offset-lg-6">
+                <div class="col-lg-6 offset-lg-6 top-z-index">
                     <h2>Discover our 400+ Merchants</h2>
                     <p class="mb-4">Click below to find our 2018's list of merchants and amazing offers.</p>
                     <a href="https://mybookqatar.github.io/merchants/" target="_blank" class="btn btn-primary">Read more</a>
                 </div>
             </div>
-            <div class="perspective-phone module">
+            <div class="perspective-phone module white-bg">
                 <img src="images/chef.png" alt="perspective phone" class="flip-image img-fluid">
             </div>
         </div>
@@ -513,7 +655,7 @@ URI     : https://colorlib.com
 
             <div class="testimonials owl-carousel">
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <!-- <img src="images/client.png" alt="client" class="client-img"> -->
                     <blockquote class="blockquote">Great application vs book, contains alot of places to utilize buy one and get one free, also with updated
                         offers throughout the year, compared to the price you will save it's price from the first use, imagine
                         how much you will save throughout the year, better price than others..Easy to use</blockquote>
@@ -522,7 +664,7 @@ URI     : https://colorlib.com
 
                 </div>
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <!-- <img src="images/client.png" alt="client" class="client-img"> -->
                     <blockquote class="blockquote">The price is much worth the value you get from it. You really start saving once you try it. Suggest to
                         try it to everyone. As for me i use it with my friends a lot and have saved lots last year.
                     </blockquote>
@@ -530,7 +672,7 @@ URI     : https://colorlib.com
                     <a href="https://www.facebook.com/darya.prinsses/posts/1822155827835067" class="text-primary">Facebook Page Reviews</a>
                 </div>
                 <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
+                    <!-- <img src="images/client.png" alt="client" class="client-img"> -->
                     <blockquote class="blockquote">My book Qatar simply made for people, which are living in Qatar.
                         <br> Enjoy, Redeem and save to make outgoing activities more beautiful.
                     </blockquote>
@@ -544,7 +686,7 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-    <div class="section" id="pricing">
+    <div class="section white-bg" id="pricing">
         <div class="container">
             <div class="section-title">
                 <h3>Buy My Book Today (30% OFF)</h3>
@@ -594,8 +736,7 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-
-    <div class="section pt-0">
+    <div class="section pt-0 white-bg">
         <div class="container">
             <div class="section-title">
                 <h3>Frequently Asked Questions</h3>
@@ -656,13 +797,16 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7715816052682!2d51.49131591489316!3d25.27826823461008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dae9dd8323b1%3A0x14cf48ef7501d745!2sMY+BOOK+QATAR!5e0!3m2!1sen!2sqa!4v1525170529083"
-        width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="section white-bg no-padding" id="downloadapp">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7715816052682!2d51.49131591489316!3d25.27826823461008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dae9dd8323b1%3A0x14cf48ef7501d745!2sMY+BOOK+QATAR!5e0!3m2!1sen!2sqa!4v1525170529083"
+            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
 
     <!-- // end .section -->
 
     <!---->
-    <div class="section" id="contact" class="section-padding wow fadeInUp delay-05s">
+    <div class="section white-bg" id="contact" class="section-padding wow fadeInUp delay-05s">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center white">
@@ -684,18 +828,26 @@ URI     : https://colorlib.com
                         </p>
 
                         <p>
-                            <i class="fa fa-map-marker fa-fw fa-2x"></i>
-                            <a class="mr-4" href="https://goo.gl/maps/GrMkCuKnyoQ2">Retaj Building, 3rd Floor, Office #311, Al Sadd, Doha- Qatar</a>
+                            <span style="float: left;">
+                                <i class="fa fa-map-marker fa-fw fa-2x"></i>
+                            </span>
+                            <span style="float: left; ">
+                                <a class="mr-4" href="https://goo.gl/maps/GrMkCuKnyoQ2">Retaj Building, 3rd Floor, Office #311,
+                                    <br>Al Sadd, Doha- Qatar</a>
+                            </span>
                         </p>
 
-                        <p>
+                        <p style="clear: both;">
                             <i class="fa fa-facebook fa-fw fa-2x"></i>
-                            <a href="https://www.facebook.com/MyBookQatar/">@mybookqatar</a> &nbsp;
+                            <a href="https://www.facebook.com/MyBookQatar/">@mybookqatar</a>
+                            <br>
                             <i class="fa fa-instagram fa-fw fa-2x"></i>
                             <a href="https://www.instagram.com/mybookqatar/">@mybookqatar</a>
                         </p>
                     </div>
                 </div>
+                <br>
+                <br>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="contact-form">
                         <div class='woobox-offer' data-offer='pg54ip'></div>
@@ -731,6 +883,7 @@ URI     : https://colorlib.com
 
     <!-- jQuery and Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script> -->
     <!-- Plugins JS -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->

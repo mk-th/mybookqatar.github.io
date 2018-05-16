@@ -63,6 +63,25 @@ win.scroll(function (event) {
 
 
 $(document).ready(function () {
+    window.onresize = doALoadOfStuff;
+
+    function doALoadOfStuff() {
+        if ($(window).width() <= 991) {
+            var videoFile = 'videos/test-portrait.webm';
+            $('#divVideo video source').attr('src', videoFile);
+            $("#divVideo video")[0].load();
+            $("#divVideo video")[0].play();
+        }
+
+        if ($(window).width() >= 992) {
+            var videoFile = 'videos/test-landscape.webm';
+            // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
+            $('#divVideo video source').attr('src', videoFile);
+            $("#divVideo video")[0].load();
+            $("#divVideo video")[0].play();
+        }
+    }
+
 
     /* Every time the window is scrolled ... */
     $(window).scroll(function () {
