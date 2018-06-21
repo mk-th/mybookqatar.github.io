@@ -739,8 +739,8 @@ h3 {
 #return-to-top {
     z-index: 1000;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 100px;
     background: #00a098;
     background-image: -moz-linear-gradient( 122deg, #00a098 0%, #009790 100%);
     background-image: -webkit-linear-gradient( 122deg, #00a098 0%, #009790 100%);
