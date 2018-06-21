@@ -210,6 +210,9 @@ a.text-primary:hover {
     h2 {
         font-size: 30px;
     }
+    .glooom {
+        display: none;
+    }
 }
 
 /* NAVBAR
