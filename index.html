@@ -22,7 +22,12 @@ URI     : https://colorlib.com
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Quicksand:400,700" rel="stylesheet">
 
     <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="test.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -37,7 +42,26 @@ URI     : https://colorlib.com
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
-    <div id='woobox-root'></div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src =
+                'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=install_email page_id="492738350771745" theme_color="#7e009e" logged_in_greeting="Welcome to My Book! How can we help you?"
+        logged_out_greeting="Welcome to My Book! How can we help you?">
+    </div>
+
+    <!-- <div id='woobox-root'></div>
     <script>
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -47,7 +71,7 @@ URI     : https://colorlib.com
             js.src = "https://woobox.com/js/plugins/woo.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'woobox-sdk'));
-    </script>
+    </script> -->
 
     <!-- Return to Top -->
     <a href="javascript:" id="return-to-top">
@@ -56,7 +80,45 @@ URI     : https://colorlib.com
     <!-- Nav Menu -->
 
     <div class="nav-menu fixed-top">
-        <div class="container">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-6">
+                        <ul class="nav social_icon">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-blogger-b"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="top_btn d-flex justify-content-end">
+                            <i class="fa fa-phone fufufu"></i>&nbsp;&nbsp;
+                            <a href="tel:+97444814276">+974 44814276</a>
+
+                            <span class="fufufu">&nbsp;/&nbsp;</span>
+
+                            <a href="https://api.whatsapp.com/send?phone=0097450907270">+974 50907270</a> &nbsp; &nbsp; &nbsp;
+
+                            <i class="fa fa-envelope fufufu"></i>&nbsp;&nbsp;
+                            <a href="mailto:marketing@mybookqatar.com"> marketing@mybookqatar.com </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container headnav">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-light navbar-expand-lg">
@@ -124,9 +186,9 @@ URI     : https://colorlib.com
             </script>
         </div>
         <div class="container mt-5">
-            <h1>My Book Qatar 2018</h1>
-            <p class="tagline">Your one-stop destination for 2 for 1 offers in Qatar. Join today and start saving with more than 1400 offers
-                from 400 outlets.</p>
+            <h1 class="bliim">My Book Qatar 2018</h1>
+            <p class="tagline">Your one-stop destination for 2 for 1 offers in Qatar. Join today
+                <br>and start saving with 1400+ offers from 400 outlets.</p>
         </div>
         <div class="img-holder mt-3">
             <br>
@@ -517,7 +579,7 @@ URI     : https://colorlib.com
 
     </div>
     <!-- /Numbers -->
-    <div class="section white-bg" id="ourmerchants">
+    <div class="section light-bg" id="ourmerchants">
 
         <div class="container">
             <div class="row">
@@ -527,7 +589,7 @@ URI     : https://colorlib.com
                     <a href="https://mybookqatar.github.io/merchants/" target="_blank" class="btn btn-primary">Read more</a>
                 </div>
             </div>
-            <div class="perspective-phone module white-bg">
+            <div class="perspective-phone module light-bg">
                 <img src="images/chef.png" alt="perspective phone" class="flip-image img-fluid">
             </div>
         </div>
@@ -535,72 +597,8 @@ URI     : https://colorlib.com
     </div>
     <!-- // end .section -->
 
-
-    <div class="section clear-float light-bg">
-        <div class="container">
-            <div class="section-title">
-                <h3>Our Products</h3>
-            </div>
-
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#app">Mobile App</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#book">Printed Book</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="app">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/app.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5
-                            mb-lg-0">
-                        <div>
-                            <h2>My Book 2018 Mobile App</h2>
-                            <p class="lead">Small and simple yet portable and powerful</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                                pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                                mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar
-                                lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum
-                                blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin.
-                                Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor
-                                id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="book">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/book.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5
-                            mb-lg-0">
-                        <div>
-                            <h2>My Book 2018 Printed Book</h2>
-                            <p class="lead">Big book filled with even bigger coupons</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque
-                                pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet
-                                mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar
-                                lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum
-                                blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin.
-                                Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor
-                                id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <!-- // end .section -->
-
-
-    <div class="section white-bg">
+    <!-- <div class="section white-bg"> -->
+    <div class="section clear-float white-bg">
         <div class="section-title">
             <h3>How to Use My Book App?</h3>
         </div>
@@ -695,7 +693,10 @@ URI     : https://colorlib.com
             <div class="card-deck">
                 <div class="card pricing popular">
                     <div class="card-head">
-                        <div class="text-primary large-text">Mobile App (VIP Key)</div>
+                        <img src="images/app.png" alt="graphic" class="img-fluid flflfl">
+                        <!-- <div class="text-primary large-text">Mobile App (VIP Key)</div> -->
+                        <div class="text-primary large-text">Mobile App</div>
+                        <!-- <p class="lead">Small and simple yet<br>portable and powerful</p> -->
                         <span class="price">QR 175
                             <sub>
                                 <del>250</del>
@@ -712,7 +713,9 @@ URI     : https://colorlib.com
                 </div>
                 <div class="card pricing">
                     <div class="card-head">
+                        <img src="images/book.png" alt="graphic" class="img-fluid flflfl">
                         <div class="text-primary large-text">Printed Book</div>
+                        <!-- <p class="lead">Big book filled with<br>even bigger coupons</p> -->
                         <span class="price">QR 200
                             <sub>
                                 <del>290</del>
@@ -850,7 +853,7 @@ URI     : https://colorlib.com
                 <br>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="contact-form">
-                        <div class='woobox-offer' data-offer='pg54ip'></div>
+                        <!-- <div class='woobox-offer' data-offer='pg54ip'></div> -->
                     </div>
                 </div>
             </div>
