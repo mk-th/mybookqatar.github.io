@@ -44,3 +44,20 @@
 .paddf {
     padding-bottom: 50px !important;
 }
+
+/* .widthvw {
+    width: 100vw;
+} */
+
+.lalas {
+    background-color: #e9eef1;
+    display: inline;
+    padding: .2em .6em .3em;
+    line-height: 2;
+    font-size: 75%;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
