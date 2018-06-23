@@ -1334,9 +1334,9 @@ h3 {
 }
 
 .fufufu {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 30px;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 30px !important;
     color: #000;
 }
 
