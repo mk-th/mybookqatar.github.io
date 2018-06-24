@@ -1381,10 +1381,11 @@ h3 {
     -webkit-box-shadow:inset 0 0 3px #333;
     box-shadow:inner 0 0 3px #333;
     padding:12px 14px 12px 14px;
-    width:300px;
+    width:360px;
     position:fixed;
     bottom:13px;
-    right:2px;
+    right:24px;
     display:none;
     z-index:90;
+    overflow: hidden;
 }
