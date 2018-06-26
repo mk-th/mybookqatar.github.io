@@ -67,20 +67,28 @@ $(document).ready(function () {
 
     function doALoadOfStuff() {
         if ($(window).width() <= 991) {
-            var videoFile = 'videos/test-portrait.webm';
-            $('#divVideo video source').attr('src', videoFile);
-            $("#divVideo video")[0].load();
-            $("#divVideo video")[0].play();
             alert("adad");
+            try { 
+                var videoFile = 'videos/test-portrait.webm';
+                $('#divVideo video source').attr('src', videoFile);
+                $("#divVideo video")[0].load();
+                $("#divVideo video")[0].play();
+            } catch(err) {  //We can also throw from try block and catch it here
+                console.log("err");
+            }
         }
 
         if ($(window).width() >= 992) {
-            var videoFile = 'videos/test-landscape.webm';
-            // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
-            $('#divVideo video source').attr('src', videoFile);
-            $("#divVideo video")[0].load();
-            $("#divVideo video")[0].play();
             alert("sdsds");
+            try {
+                var videoFile = 'videos/test-landscape.webm';
+                // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
+                $('#divVideo video source').attr('src', videoFile);
+                $("#divVideo video")[0].load();
+                $("#divVideo video")[0].play();
+            } catch(err) {  //We can also throw from try block and catch it here
+                console.log("err");
+            }
         }
     }
 
