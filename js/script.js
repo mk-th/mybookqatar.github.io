@@ -71,6 +71,7 @@ $(document).ready(function () {
             $('#divVideo video source').attr('src', videoFile);
             $("#divVideo video")[0].load();
             $("#divVideo video")[0].play();
+            alert("adad");
         }
 
         if ($(window).width() >= 992) {
@@ -79,6 +80,7 @@ $(document).ready(function () {
             $('#divVideo video source').attr('src', videoFile);
             $("#divVideo video")[0].load();
             $("#divVideo video")[0].play();
+            alert("sdsds");
         }
     }
 
@@ -253,6 +255,7 @@ $(window).scroll(function(){
     if($(document).scrollTop()>=$(document).height()/5)
         $("#spopup").show("slow");else $("#spopup").hide("slow");
 });
+
 function closeSPopup(){
     $('#spopup').hide('slow');
 }
