@@ -1408,8 +1408,9 @@ h3 {
         right: 15px;
     }
     #spopup {
-        width: 80vw;
-        bottom: 5%;
+        /* width: 80vw;
+        bottom: 5%; */
+        display: none;
     }
     .coverz {
         width: 80%;
