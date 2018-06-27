@@ -1407,4 +1407,9 @@ h3 {
     #return-to-top {
         right: 15px;
     }
+
+    #spopup {
+        width: 90vw;
+        bottom: 5%;
+    }
 }

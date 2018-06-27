@@ -68,7 +68,7 @@ $(document).ready(function () {
     function doALoadOfStuff() {
         if ($(window).width() <= 991) {
             $("#fb-root").html(null);
-            $("#spopup").html(null);
+            // $("#spopup").html(null);
             try { 
                 var videoFile = 'videos/test-portrait.webm';
                 $('#divVideo video source').attr('src', videoFile);
