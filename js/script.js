@@ -68,7 +68,7 @@ $(document).ready(function () {
     function doALoadOfStuff() {
         if ($(window).width() <= 991) {
             $("#fb-root").html(null);
-            console.log("asasa",$("#fb-root").html());
+            $("#spopup").html(null);
             try { 
                 var videoFile = 'videos/test-portrait.webm';
                 $('#divVideo video source').attr('src', videoFile);
@@ -81,7 +81,6 @@ $(document).ready(function () {
 
         if ($(window).width() >= 992) {
             // $("#fb-root").html(null);
-            console.log("sds",$("#fb-root").html());
             try {
                 var videoFile = 'videos/test-landscape.webm';
                 // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';

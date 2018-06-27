@@ -1402,3 +1402,9 @@ h3 {
         display: block;
     }
 }
+
+@media only screen and (max-width: 991px) {
+    #return-to-top {
+        right: 15px;
+    }
+}
