@@ -1418,4 +1418,8 @@ h3 {
     #fb-root {
         display: none;
     }
+
+    .header_top{
+        display: none;
+    }
 }
