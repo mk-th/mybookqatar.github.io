@@ -67,8 +67,8 @@ $(document).ready(function () {
 
     function doALoadOfStuff() {
         if ($(window).width() <= 991) {
-            $("#fb-chatz").html(null);
-            console.log("asasa",$("#fb-chatz").html());
+            $("#fb-root").html(null);
+            console.log("asasa",$("#fb-root").html());
             try { 
                 var videoFile = 'videos/test-portrait.webm';
                 $('#divVideo video source').attr('src', videoFile);
@@ -80,8 +80,8 @@ $(document).ready(function () {
         }
 
         if ($(window).width() >= 992) {
-            $("#fb-chatz").html("<div id='fb-root'/>");
-            console.log("sds",$("#fb-chatz").html());
+            // $("#fb-root").html(null);
+            console.log("sds",$("#fb-root").html());
             try {
                 var videoFile = 'videos/test-landscape.webm';
                 // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
