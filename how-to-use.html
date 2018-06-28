@@ -164,8 +164,7 @@ URI     : https://colorlib.com
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">HOME
-                                        <span class="sr-only">(current)</span>
+                                    <a class="nav-link" href="index.html">HOME
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -175,7 +174,8 @@ URI     : https://colorlib.com
                                     <a class="nav-link" href="our-merchants.html">OUR MERCHANTS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="how-to-use.html">HOW TO USE</a>
+                                    <a class="nav-link active" href="how-to-use.html">HOW TO USE</a>
+                                    <span class="sr-only">(current)</span>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="buy-my-book.html">PRICING</a>
@@ -195,124 +195,9 @@ URI     : https://colorlib.com
     </div>
 
 
-    <header class="nav-gradient" id="home">
-        <div id="divVideo">
-            <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="banner__video" poster="images/video-poster.png">
-                <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.webm" type="video/webm"> -->
-                <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4" type="video/mp4"> -->
-                <source src="videos/test-landscape.webm" type="video/webm" />
-                <source src="videos/test-landscape.mp4" type="video/mp4" />
-            </video>
-            <script>
-                if ($(window).width() <= 991) {
-                    var videoFile = 'videos/test-portrait.webm';
-                    $('#divVideo video source').attr('src', videoFile);
-                    $("#divVideo video")[0].load();
-                    $("#divVideo video")[0].play();
-                }
-
-                if ($(window).width() >= 992) {
-                    var videoFile = 'videos/test-landscape.webm';
-                    // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
-                    $('#divVideo video source').attr('src', videoFile);
-                    $("#divVideo video")[0].load();
-                    $("#divVideo video")[0].play();
-                }
-            </script>
-        </div>
-        <div class="container mt-5">
-            <h1 class="bliim">My Book Qatar 2018</h1>
-            <p class="tagline">Your one-stop destination for 2 for 1 offers in Qatar. Join today
-                <br/>and start saving with 1400+ offers from 400 outlets.</p>
-        </div>
-        <div class="img-holder mt-3">
-            <br/>
-            <img src="images/video-long.gif" width="380" alt="animated" />
-        </div>
-    </header>
-
-    <!-- Numbers -->
-    <!--
-    <div id="numbers" class="sectionate bg-gradient sm-padding">
-        <div class="container-fluid">
-
-            <div class="row">
-
-                <div class="col-md-2 col-md-offset-3 margin-bottom-sm">
-                    <div class="text-align-left float-left margin-right-sm">
-                        <img src="images/offers_icon.png" alt="client" class="client-img" />
-                    </div>
-                    <div class="number text-align-left float-left">
-                        <strong class="white-text">More than</strong>
-                        <h3 class="white-text margin-0">
-                            <span class="counter" data-count="1400">1300</span>
-                        </h3>
-                        <strong class="white-text">Offers!</strong>
-                    </div>
-                </div>
-
-                <div class="col-md-2 margin-bottom-sm">
-                    <div class="text-align-left float-left margin-right-sm">
-                        <img src="images/outlets_icon.png" alt="client" class="client-img" />
-                    </div>
-                    <div class="number text-align-left float-left">
-                        <strong class="white-text">From over</strong>
-                        <h3 class="white-text margin-0">
-                            <span class="counter" data-count="400">300</span>
-                        </h3>
-                        <strong class="white-text">Outlets!</strong>
-                    </div>
-                </div>
-
-                <div class="col-md-3 margin-bottom-sm">
-                    <div class="text-align-left float-left margin-right-sm margin-right-5">
-                        <img src="images/savings_icon.png" alt="client" class="client-img" />
-                    </div>
-                    <div class="number text-align-left float-left">
-                        <strong class="white-text margin-left-7">More than</strong>
-                        <div>
-                            <div class="rotate-left">QR</div>
-                            <div class="float-left">
-                                <h3 class="white-text margin-0">
-                                    <span class="counter" data-count="350000">300000</span>
-                                </h3>
-                            </div>
-                        </div>
-                        <strong class="white-text margin-left-7">Savings!</strong>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-    -->
-    <!-- /Numbers -->
-
-    <!--
-        <div class="sectionate light-bg" id="our-merchants">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-6 top-z-index">
-                    <h2>Discover our 400+ Merchants</h2>
-                    <p class="mb-4">Click below to find our 2018's list of merchants and amazing offers.</p>
-                    <a href="https://mybookqatar.github.io/merchants/" target="_blank" class="btn btn-primary">Read more</a>
-                </div>
-            </div>
-            <div class="perspective-phone module light-bg">
-                <img src="images/chef.png" alt="perspective phone" class="flip-image img-fluid" />
-            </div>
-        </div>
-
-    </div>
-    -->
-    <!-- // end .section -->
-
+    <header></header>
 
     <!-- <div class="sectionate white-bg"> -->
-    <!--
     <div class="sectionate clear-float white-bg paddf">
         <div class="section-title">
             <h3>How to Use My Book App?</h3>
@@ -373,45 +258,6 @@ URI     : https://colorlib.com
         </div>
 
     </div>
-    -->
-    <!-- // end .section -->
-
-    <!--
-    <div class="sectionate light-bg">
-        <div class="container">
-            <div class="section-title">
-                <h3>What Our Users Say</h3>
-            </div>
-
-            <div class="testimonials owl-carousel">
-                <div class="testimonials-single">
-                    <blockquote class="blockquote">Great application vs book, contains alot of places to utilize buy one and get one free, also with updated
-                        offers throughout the year, compared to the price you will save it's price from the first use, imagine
-                        how much you will save throughout the year, better price than others..Easy to use</blockquote>
-                    <h5 class="mt-4 mb-2">Mohmad Ramadan</h5>
-                    <a href="https://www.facebook.com/mhmad.tillawy/posts/10215217430572084" class="text-primary">Facebook Page Reviews</a>
-
-                </div>
-                <div class="testimonials-single">
-                    <blockquote class="blockquote">The price is much worth the value you get from it. You really start saving once you try it. Suggest to
-                        try it to everyone. As for me i use it with my friends a lot and have saved lots last year.
-                    </blockquote>
-                    <h5 class="mt-4 mb-2">Darya Bakriy</h5>
-                    <a href="https://www.facebook.com/darya.prinsses/posts/1822155827835067" class="text-primary">Facebook Page Reviews</a>
-                </div>
-                <div class="testimonials-single">
-                    <blockquote class="blockquote">My book Qatar simply made for people, which are living in Qatar.
-                        <br/> Enjoy, Redeem and save to make outgoing activities more beautiful.
-                    </blockquote>
-                    <h5 class="mt-4 mb-2">Hatem Omar</h5>
-                    <a href="https://www.facebook.com/hatemo/posts/10155262988816911" class="text-primary">Facebook Page Reviews</a>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    -->
     <!-- // end .section -->
 
     <!--
@@ -469,8 +315,7 @@ URI     : https://colorlib.com
     -->
     <!-- // end .section -->
 
-    <!--
-    <div class="sectionate pt-0 white-bg">
+    <div class="sectionate light-bg">
         <div class="container">
             <div class="section-title">
                 <h3>Frequently Asked Questions</h3>
@@ -504,103 +349,7 @@ URI     : https://colorlib.com
         </div>
 
     </div>
-    -->
     <!-- // end .section -->
-
-    <!--
-    <div class="sectionate bg-gradient" id="downloadapp">
-        <div class="container">
-            <div class="call-to-action">
-                <h2>Download our App for Free</h2>
-                <p class="tagline">Available for both iOS and Android platforms.</p>
-                <div class="my-4">
-
-                    <a href="https://itunes.apple.com/mz/app/mybook-qatar/id978034937?mt=8" class="btn btn-light">
-                        <img src="images/appleicon.png" alt="icon" /> App Store</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.tedmob.mybook" class="btn btn-light">
-                        <img src="images/playicon.png" alt="icon" /> Google play</a>
-                </div>
-                <p class="nav-link">
-                    <small>
-                        <i>*Works on iOS 10.0 or later, Android 4.1 and up. </i>
-                    </small>
-                </p>
-            </div>
-        </div>
-
-    </div>
-    -->
-    <!-- // end .section -->
-
-    <!--
-    <div class="sectionate white-bg" style="padding: 0px !important">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7715816052682!2d51.49131591489316!3d25.27826823461008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dae9dd8323b1%3A0x14cf48ef7501d745!2sMY+BOOK+QATAR!5e0!3m2!1sen!2sqa!4v1525170529083"
-            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
-    </div>
-    -->
-
-
-    <!-- // end .section -->
-
-    <!--
-    <div class="sectionate white-bg section-padding wow fadeInUp delay-05s" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center white">
-                    <h2 class="service-title pad-bt15">Get in touch</h2>
-                    <br/>
-                </div>
-                <div class="col-md-6 col-xs-12" style="margin-top: 25px;">
-                    <div class="loction-info white">
-                        <p style="margin-bottom: 0;">
-                            <i class="fa fa-phone fa-fw fa-2x"></i>
-                            <a href="tel:+97444814276">+974 44814276</a> /
-                            <a href="https://api.whatsapp.com/send?phone=0097450907270">+974 50907270</a>
-                        </p>
-
-                        <p style="margin-bottom: 0;">
-                            <i class="fa fa-envelope fa-fw fa-2x" style="font-size: 20px;"></i>
-                            <a class="mr-4" href="mailto:customerservice@mybookqatar.com">customerservice@mybookqatar.com</a>
-                        </p>
-                        <p style="margin-bottom: 0;">
-                            <i class="fa fa-envelope fa-fw fa-2x" style="font-size: 20px;"></i>
-                            <a class="mr-4" href="mailto:marketing@mybookqatar.com">marketing@mybookqatar.com</a>
-                        </p>
-
-                        <p style="margin-bottom: 0;">
-                            <span style="float: left;">
-                                <i class="fa fa-map-marker fa-fw fa-2x" style="margin-bottom: 0;"></i>
-                            </span>
-                            <span style="float: left;width: 90%;">
-                                <a class="mr-4" href="https://goo.gl/maps/GrMkCuKnyoQ2">Retaj Building, 3rd Floor, Office #311, Al Sadd, Doha- Qatar</a>
-                            </span>
-                        </p>
-
-                        <p style="clear: both;"></p>
-
-                        <p style="margin-bottom: 0;">
-                            <i class="fa fa-facebook fa-fw fa-2x"></i>
-                            <a href="https://www.facebook.com/MyBookQatar/">@mybookqatar</a>
-                        </p>
-
-                        <p style="margin-bottom: 0;">
-                            <i class="fa fa-instagram fa-fw fa-2x"></i>
-                            <a href="https://www.instagram.com/mybookqatar/">@mybookqatar</a>
-                        </p>
-                    </div>
-                </div>
-                <br/>
-                <br/>
-                <div class="col-md-6 col-xs-12" style="margin-top: 25px;padding: 0;">
-                    <div class="contact-form">
-                        <div class='woobox-offer' data-offer='pg54ip'></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!---->
 
     <!---->
     <div class="sectionate white-bg section-padding wow fadeInUp delay-05s" id="footer">

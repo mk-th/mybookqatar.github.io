@@ -50,17 +50,14 @@ allMods.each(function (i, el) {
     }
 });
 
-win.scroll(function (event) {
-
-    allMods.each(function (i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-            el.addClass("come-in");
-        }
-    });
-
-});
-
+// win.scroll(function (event) {
+//     allMods.each(function (i, el) {
+//         var el = $(el);
+//         if (el.visible(true)) {
+//             el.addClass("come-in");
+//         }
+//     });
+// });
 
 $(document).ready(function () {
     window.onresize = doALoadOfStuff;
@@ -69,12 +66,12 @@ $(document).ready(function () {
         if ($(window).width() <= 991) {
             $("#fb-root").html(null);
             $("#spopup").html(null);
-            try { 
+            try {
                 var videoFile = 'videos/test-portrait.webm';
                 $('#divVideo video source').attr('src', videoFile);
                 $("#divVideo video")[0].load();
                 $("#divVideo video")[0].play();
-            } catch(err) {  //We can also throw from try block and catch it here
+            } catch (err) { //We can also throw from try block and catch it here
                 console.log("err");
             }
         }
@@ -87,7 +84,7 @@ $(document).ready(function () {
                 $('#divVideo video source').attr('src', videoFile);
                 $("#divVideo video")[0].load();
                 $("#divVideo video")[0].play();
-            } catch(err) {  //We can also throw from try block and catch it here
+            } catch (err) { //We can also throw from try block and catch it here
                 console.log("err");
             }
         }
@@ -260,11 +257,12 @@ $('.counter').each(function () {
 
 });
 
-$(window).scroll(function(){
-    if($(document).scrollTop()>=$(document).height()/5)
-        $("#spopup").show("slow");else $("#spopup").hide("slow");
+$(window).scroll(function () {
+    if ($(document).scrollTop() >= $(document).height() / 5)
+        $("#spopup").show("slow");
+    else $("#spopup").hide("slow");
 });
 
-function closeSPopup(){
+function closeSPopup() {
     $('#spopup').hide('slow');
 }

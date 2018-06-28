@@ -641,7 +641,7 @@ h3 {
 .call-to-action {
     text-align: center;
     color: #fff;
-    margin: 3rem 0;
+    /* margin: 3rem 0; */
 }
 
 .call-to-action .box-icon {
