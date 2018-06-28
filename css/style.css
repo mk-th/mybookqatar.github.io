@@ -1426,4 +1426,8 @@ h3 {
     .header-top{
         display: none;
     }
+
+    .container.sp_sidebar {
+        margin-top: 65px;
+    }
 }
