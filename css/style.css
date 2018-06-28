@@ -1422,4 +1422,8 @@ h3 {
     .header_top{
         display: none;
     }
+
+    .header-top{
+        display: none;
+    }
 }
