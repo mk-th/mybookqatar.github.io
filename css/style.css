@@ -315,12 +315,6 @@ header {
     margin: 0 auto;
 }
 
-.img-holder {
-    height: 0;
-    padding-bottom: 33%;
-    overflow: hidden;
-}
-
 @media (max-width:1200px) {
     .img-holder {
         padding-bottom: 50%;
@@ -1401,9 +1395,39 @@ h3 {
     .hoshd {
         display: block;
     }
+    .banner__video {
+        height: 100%;
+    }
+    .xxxxsda {
+        padding-top: 25%;
+    }
+    .img-holder {
+        height: 62vh;
+        padding-bottom: 33%;
+        overflow: hidden;
+        bottom: 0;
+        position: absolute;
+    }
 }
 
 @media only screen and (max-width: 991px) {
+    .img-holder {
+        height: 62vh;
+        padding-bottom: 33%;
+        overflow: hidden;
+        position: inherit;
+    }
+    .xssa {
+        background-color: #f7fbfe;
+    }
+    .call-to-action .tagline,
+    .bliim {
+        color: black !important;
+    }
+    #home .container {
+        margin: auto 0;
+        max-width: 100vw !important;
+    }
     #return-to-top {
         right: 15px;
     }
@@ -1418,16 +1442,34 @@ h3 {
     #fb-root {
         display: none;
     }
-
-    .header_top{
+    .header_top {
         display: none;
     }
-
-    .header-top{
+    .header-top {
         display: none;
     }
-
     .container.sp_sidebar {
         margin-top: 65px;
     }
+    .xxxxsda {
+        padding-top: 0;
+    }
+    .banner__video {
+        width: 100vw;
+    }
+    .img-holder {
+        height: 62vh;
+        padding-bottom: 33%;
+        overflow: hidden;
+    }
+}
+
+#downloadapp {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+.sdasf {
+    height: 100%;
 }
