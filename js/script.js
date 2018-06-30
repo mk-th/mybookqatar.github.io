@@ -268,11 +268,14 @@ function closeSPopup() {
 }
 
 $(document).on("click", function (e) {
-    if (
-        $(e.target).closest(".responsive-menu").length == 0 &&
-        $(".responsive-menu").hasClass("expand") &&
-        $(e.target).closest(".menu-btn").length == 0
-    ) {
-        $('.responsive-menu').toggleClass('expand');
+    var container = $("#navbar");
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if (
+            container.hasClass('navbar-collapse collapse show')
+        ) {
+            container.removeClass('show');
+        }
     }
+
 });
