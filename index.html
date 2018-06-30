@@ -203,32 +203,33 @@ URI     : https://colorlib.com
             </div>
         </div>
     </div>
+    <header></header>
+    <div class="nav-gradient" id="home">
+        <video autoplay="autoplay" id="myvid" loop="loop" muted="muted" playsinline="playsinline" class="banner__video" poster="images/video-poster.png">
+            <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.webm" type="video/webm"> -->
+            <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4" type="video/mp4"> -->
+            <source src="videos/test-landscape.webm" type="video/webm" />
+            <source src="videos/test-landscape.mp4" type="video/mp4" />
+        </video>
 
-    <header class="nav-gradient" id="home">
+        <script>
+            if ($(window).width() <= 991) {
+                var videoFile = 'videos/test-portrait.webm';
+                $('#divVideo video source').attr('src', videoFile);
+                $("#divVideo video")[0].load();
+                $("#divVideo video")[0].play();
+            }
+
+            if ($(window).width() >= 992) {
+                var videoFile = 'videos/test-landscape.webm';
+                // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
+                $('#divVideo video source').attr('src', videoFile);
+                $("#divVideo video")[0].load();
+                $("#divVideo video")[0].play();
+            }
+        </script>
         <div class="container">
             <div class="row" id="divVideo">
-                <video autoplay="autoplay" id="myvid" loop="loop" muted="muted" playsinline="playsinline" class="banner__video" poster="images/video-poster.png">
-                    <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.webm" type="video/webm"> -->
-                    <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4" type="video/mp4"> -->
-                    <source src="videos/test-landscape.webm" type="video/webm" />
-                    <source src="videos/test-landscape.mp4" type="video/mp4" />
-                </video>
-                <script>
-                    if ($(window).width() <= 991) {
-                        var videoFile = 'videos/test-portrait.webm';
-                        $('#divVideo video source').attr('src', videoFile);
-                        $("#divVideo video")[0].load();
-                        $("#divVideo video")[0].play();
-                    }
-
-                    if ($(window).width() >= 992) {
-                        var videoFile = 'videos/test-landscape.webm';
-                        // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
-                        $('#divVideo video source').attr('src', videoFile);
-                        $("#divVideo video")[0].load();
-                        $("#divVideo video")[0].play();
-                    }
-                </script>
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="img-holder mt-5">
                         <br/>
@@ -252,18 +253,23 @@ URI     : https://colorlib.com
                                 <a href="https://play.google.com/store/apps/details?id=com.tedmob.mybook" class="btn btn-light">
                                     <img src="images/playicon.png" alt="icon" /> Google play</a>
                             </div>
-                            <p class="nav-link">
-                                <small>
-                                    <!-- <i>*Works on iOS 10.0 or later, Android 4.1 and up. </i> -->
-                                </small>
-                            </p>
                         </div>
                     </div>
                     <!-- </div> -->
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+
+    <div class="sectionate light-bg">
+            <div class="container">
+                <div class="">
+                    <h2>Download our App for Free</h2>
+                    <a href="https://mybookqatar.github.io/merchants/" target="_blank" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+        </div>
+        <!-- // end .section -->
 
     <!-- // end .section -->
 

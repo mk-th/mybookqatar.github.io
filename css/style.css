@@ -1395,14 +1395,12 @@ h3 {
     .hoshd {
         display: block;
     }
-    .banner__video {
-        height: 100%;
-    }
     .xxxxsda {
         padding-top: 25%;
     }
     .img-holder {
         height: 62vh;
+        height: 85%;
         padding-bottom: 33%;
         overflow: hidden;
         bottom: 0;
@@ -1464,12 +1462,23 @@ h3 {
     }
 }
 
+/*
 #downloadapp {
     height: 100%;
     position: absolute;
-    top: 50%;
+    top: 50%; 
 }
+*/
 
 .sdasf {
+    height: 100%;
+}
+
+#home {
+    height: 84vh;
+}
+
+#home .container,
+#divVideo {
     height: 100%;
 }
