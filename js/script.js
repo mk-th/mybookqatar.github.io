@@ -279,3 +279,16 @@ $(document).on("click", function (e) {
     }
 
 });
+
+$(document).on("click", function (e) {
+    var container = $("#navbar");
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if (
+            container.hasClass('navbar-collapse primary_nav_wrap collapse show')
+        ) {
+            container.removeClass('show');
+        }
+    }
+
+});
