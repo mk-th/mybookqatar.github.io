@@ -266,3 +266,13 @@ $(window).scroll(function () {
 function closeSPopup() {
     $('#spopup').hide('slow');
 }
+
+$(document).on("click", function (e) {
+    if (
+        $(e.target).closest(".responsive-menu").length == 0 &&
+        $(".responsive-menu").hasClass("expand") &&
+        $(e.target).closest(".menu-btn").length == 0
+    ) {
+        $('.responsive-menu').toggleClass('expand');
+    }
+});
