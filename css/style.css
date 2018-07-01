@@ -1215,7 +1215,7 @@ h3 {
 
 @media (max-width:991px) {
     .card.features {
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }
     [class^="col-"]:last-child .card.features {
         margin-bottom: 0;
