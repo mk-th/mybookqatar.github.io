@@ -1222,10 +1222,6 @@ h3 {
     }
 }
 
-.page-name span{
-    display: none;
-}
-
 .card.features:before {
     content: "";
     position: absolute;
