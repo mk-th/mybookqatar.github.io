@@ -289,5 +289,33 @@ $(document).on("click", function (e) {
             container.removeClass('show');
         }
     }
+});
 
+$(document).ready(function () {
+    var slideCount = $('.customer-logos > div').length;
+    var randomStart = Math.floor(Math.random() * slideCount);
+    $('.customer-logos').slick({
+        initialSlide: randomStart,
+        infinite: true,
+        lazyLoad: 'ondemand',
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        accessibility: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
 });
