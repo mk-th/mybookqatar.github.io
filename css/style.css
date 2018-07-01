@@ -1430,12 +1430,21 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 575px) {
+    .lg-padding {
+        padding: 5%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .lg-padding {
+        /* padding: 10%; */
+    }
+}
+
 @media only screen and (max-width: 991px) {
     #home {
         /* height: 76vh; */
-    }
-    .lg-padding {
-        /* padding-top: 80px !important; */
     }
     .sectionate {
         padding: 40px 0;
