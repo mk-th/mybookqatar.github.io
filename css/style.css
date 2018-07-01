@@ -873,7 +873,7 @@ h3 {
         margin-left: 0px;
     }
     .ksfak {
-        width: 51.5vw;
+        /* width: 51.5vw; */
     }
 }
 
@@ -1354,7 +1354,7 @@ h3 {
 }
 
 .paddf {
-    padding-bottom: 50px !important;
+    /* padding-bottom: 50px !important; */
 }
 
 /* .widthvw {
@@ -1423,7 +1423,10 @@ h3 {
         width: 100%;
     }
     .ksfak {
-        width: 36vw;
+        /* width: 36vw; */
+    }
+    .jammd {
+        margin-left: 10%;
     }
 }
 
@@ -1432,7 +1435,7 @@ h3 {
         /* height: 76vh; */
     }
     .lg-padding {
-        padding-top: 80px !important;
+        /* padding-top: 80px !important; */
     }
     .sectionate {
         padding: 40px 0;
@@ -1627,4 +1630,8 @@ h3 {
 
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.sdjjjj {
+    /* width: 50vw */
 }
