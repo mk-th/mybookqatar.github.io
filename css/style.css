@@ -412,19 +412,18 @@ header {
 
 .perspective-phone {
     position: relative;
-    /* z-index: -1; */
     z-index: 1;
 }
 
 @media (min-width:992px) {
     .flip-image {
-        -webkit-transform: scaleX(1);
+        /* -webkit-transform: scaleX(1);
         transform: scaleX(1);
         max-width: 100% !important;
-        float: none;
+        float: none; */
     }
     .perspective-phone {
-        margin-top: -150px;
+        /* margin-top: -150px; */
     }
     #numbers .margin-bottom-sm {
         /* padding-left: 20%; */
@@ -434,14 +433,21 @@ header {
 
 @media (max-width:991px) {
     .flip-image {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        max-width: 58% !important;
-        float: right;
+        /* -webkit-transform: scaleX(-1); */
+        /* transform: scaleX(-1); */
+        /* max-width: 58% !important; */
+        /* float: right; */
     }
     #numbers .margin-bottom-sm {
         padding-left: 20%;
         margin-bottom: 40px;
+    }
+    .zva {
+        margin-top: 0 !important;
+    }
+    .module {
+        position: absolute !important;
+        bottom: 0 !important;
     }
 }
 
@@ -865,6 +871,9 @@ h3 {
     }
     .contact-form .input:nth-child(2) {
         margin-left: 0px;
+    }
+    .ksfak {
+        width: 51.5vw;
     }
 }
 
@@ -1408,11 +1417,20 @@ h3 {
         text-align: center;
     }
     .banner__video {
-        height: 100%;
+        width: 100%;
+    }
+    .ksfak {
+        width: 36vw;
     }
 }
 
 @media only screen and (max-width: 991px) {
+    .lg-padding {
+        padding-top: 80px !important;
+    }
+    .sectionate {
+        padding: 40px 0;
+    }
     /* #footer {
         margin-top: 40px;
     } */
@@ -1483,10 +1501,15 @@ h3 {
 }
 
 #home {
-    height: 84vh;
+    height: 76vh;
 }
 
 #home .container,
 #divVideo {
     height: 100%;
+}
+
+.zva {
+    margin-top: 10%;
+    /* margin-bottom: 25%; */
 }
