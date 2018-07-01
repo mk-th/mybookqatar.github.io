@@ -319,7 +319,3 @@ $(document).ready(function () {
         }]
     });
 });
-
-$(".contact-form iframe").contents().find(".page-name").css('display', 'none');
-
-console.log("as",$(".contact-form iframe").contents().find(".page-name").css());
