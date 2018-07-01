@@ -255,6 +255,9 @@ a.text-primary:hover {
 }
 
 @media (min-width: 992px) {
+    .dshbsg {
+        /* margin-left: 25%; */
+    }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -1443,6 +1446,9 @@ h3 {
 }
 
 @media only screen and (max-width: 991px) {
+    .dshbsg {
+        margin-left: 25%;
+    }
     #home {
         /* height: 76vh; */
     }
