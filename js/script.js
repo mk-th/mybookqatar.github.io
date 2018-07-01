@@ -91,26 +91,26 @@ $(document).ready(function () {
 
 
     /* Every time the window is scrolled ... */
-    $(window).scroll(function () {
+    // $(window).scroll(function () {
 
-        /* Check the location of each desired element */
-        $('.hideme').each(function (i) {
+    /* Check the location of each desired element */
+    // $('.hideme').each(function (i) {
 
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+    // var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    // var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            /* If the object is completely visible in the window, fade it it */
-            if (bottom_of_window > bottom_of_object) {
+    /* If the object is completely visible in the window, fade it it */
+    // if (bottom_of_window > bottom_of_object) {
 
-                $(this).animate({
-                    'opacity': '1'
-                }, 1500);
+    // $(this).animate({
+    // 'opacity': '1'
+    // }, 1500);
 
-            }
+    // }
 
-        });
+    // });
 
-    });
+    // });
 
 });
 
@@ -217,18 +217,18 @@ $(function () {
 }); /* End Fn */
 
 // ===== Scroll to Top ==== 
-$(window).scroll(function () {
-    if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200); // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200); // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function () { // When arrow is clicked
-    $('body,html').animate({
-        scrollTop: 0 // Scroll to top of body
-    }, 500);
-});
+// $(window).scroll(function () {
+// if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+// $('#return-to-top').fadeIn(200); // Fade in the arrow
+// } else {
+// $('#return-to-top').fadeOut(200); // Else fade out the arrow
+// }
+// });
+// $('#return-to-top').click(function () { // When arrow is clicked
+// $('body,html').animate({
+// scrollTop: 0 // Scroll to top of body
+// }, 500);
+// });
 
 $('.counter').each(function () {
     var $this = $(this),
@@ -292,30 +292,34 @@ $(document).on("click", function (e) {
 });
 
 $(document).ready(function () {
-    var slideCount = $('.customer-logos > div').length;
-    var randomStart = Math.floor(Math.random() * slideCount);
-    $('.customer-logos').slick({
-        initialSlide: randomStart,
-        infinite: true,
-        lazyLoad: 'ondemand',
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        arrows: false,
-        dots: false,
-        accessibility: true,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-        }]
-    });
+    try {
+        var slideCount = $('.customer-logos > div').length;
+        var randomStart = Math.floor(Math.random() * slideCount);
+        $('.customer-logos').slick({
+            initialSlide: randomStart,
+            infinite: true,
+            lazyLoad: 'ondemand',
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            accessibility: true,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    } catch (err) {
+        console.log("err");
+    }
 });
