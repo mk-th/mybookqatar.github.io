@@ -215,24 +215,22 @@ URI     : https://colorlib.com
         <script>
             if ($(window).width() <= 991) {
                 var videoFile = 'videos/test-portrait.webm';
-                $('#divVideo video source').attr('src', videoFile);
-                $("#divVideo video")[0].load();
-                $("#divVideo video")[0].play();
+                $('#myvid source').attr('src', videoFile);
+                $("#myvid")[0].load();
+                $("#myvid")[0].play();
             }
 
             if ($(window).width() >= 992) {
                 var videoFile = 'videos/test-landscape.webm';
-                // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
-                $('#divVideo video source').attr('src', videoFile);
-                $("#divVideo video")[0].load();
-                $("#divVideo video")[0].play();
+                $('#myvid source').attr('src', videoFile);
+                $("#myvid")[0].load();
+                $("#myvid")[0].play();
             }
         </script>
         <div class="container">
-            <div class="row" id="divVideo">
+            <div class="row" style="height: 100%;">
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="img-holder mt-5">
-                        <br/>
                         <img src="images/video-long.gif" width="380" alt="animated" />
                     </div>
                 </div>

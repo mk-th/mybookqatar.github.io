@@ -68,9 +68,9 @@ $(document).ready(function () {
             $("#spopup").html(null);
             try {
                 var videoFile = 'videos/test-portrait.webm';
-                $('#divVideo video source').attr('src', videoFile);
-                $("#divVideo video")[0].load();
-                $("#divVideo video")[0].play();
+                $('#myvid source').attr('src', videoFile);
+                $("#myvid")[0].load();
+                $("#myvid")[0].play();
             } catch (err) { //We can also throw from try block and catch it here
                 console.log("err");
             }
@@ -80,10 +80,9 @@ $(document).ready(function () {
             // $("#fb-root").html(null);
             try {
                 var videoFile = 'videos/test-landscape.webm';
-                // var videoFile = 'https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4';
-                $('#divVideo video source').attr('src', videoFile);
-                $("#divVideo video")[0].load();
-                $("#divVideo video")[0].play();
+                $('#myvid source').attr('src', videoFile);
+                $("#myvid")[0].load();
+                $("#myvid")[0].play();
             } catch (err) { //We can also throw from try block and catch it here
                 console.log("err");
             }

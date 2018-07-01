@@ -1246,7 +1246,6 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     /* opacity: .3; */
     z-index: -1;
 }
@@ -1337,7 +1336,7 @@ h3 {
 }
 
 .bliim {
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
 .flflfl {
@@ -1405,15 +1404,29 @@ h3 {
         overflow: hidden;
         bottom: 0;
         position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    .banner__video {
+        height: 100%;
     }
 }
 
 @media only screen and (max-width: 991px) {
+    /* #footer {
+        margin-top: 40px;
+    } */
     .img-holder {
         height: 62vh;
         padding-bottom: 33%;
         overflow: hidden;
         position: inherit;
+    }
+    .img-holder img {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: table-cell;
     }
     .xssa {
         background-color: #f7fbfe;
@@ -1453,12 +1466,7 @@ h3 {
         padding-top: 0;
     }
     .banner__video {
-        width: 100vw;
-    }
-    .img-holder {
-        height: 62vh;
-        padding-bottom: 33%;
-        overflow: hidden;
+        width: 100%;
     }
 }
 
