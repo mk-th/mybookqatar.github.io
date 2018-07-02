@@ -197,20 +197,17 @@ $(function () {
     var $adadsDiv = $('#owl-carousel');
     if ($adadsDiv.length && $.fn.owlCarousel) {
         $adadsDiv.owlCarousel({
+            items: 6,
+            nav: false,
+            navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>'],
+            loop: true,
+            autoplay: true,
+            dots: false,
             responsiveClass: true,
             responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
                 600: {
                     items: 3,
                     nav: false
-                },
-                1000: {
-                    items: 5,
-                    nav: true,
-                    loop: false
                 }
             }
         });
