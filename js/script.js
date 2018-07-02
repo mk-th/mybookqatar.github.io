@@ -193,7 +193,7 @@ $(function () {
             navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>']
         });
     }
-    var $adadsDiv = $('.owl-carousel');
+    var $adadsDiv = $('#owl-carousel');
     $adadsDiv.owlCarousel({
         loop:false
     });
