@@ -194,8 +194,17 @@ $(function () {
         });
     }
     var $adadsDiv = $('#owl-carousel');
+    console.log("sd0", $adadsDi);
     $adadsDiv.owlCarousel({
-        loop:false
+        loop:false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            }
+        }
     });
 
     var $galleryDiv = $('.img-gallery');
