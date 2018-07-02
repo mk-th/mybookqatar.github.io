@@ -198,7 +198,7 @@ $(function () {
     if ($adadsDiv.length && $.fn.owlCarousel) {
         $adadsDiv.owlCarousel({
             items: 6,
-            nav: false,
+            nav: true,
             navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>'],
             loop: true,
             autoplay: true,
@@ -211,11 +211,11 @@ $(function () {
                 },
                 700: {
                     items: 4,
-                    nav: false
+                    nav: true
                 },
                 800: {
                     items: 5,
-                    nav: false
+                    nav: true
                 },
                 1000: {
                     items: 6,
