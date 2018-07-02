@@ -193,16 +193,24 @@ $(function () {
             navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>']
         });
     }
+
     var $adadsDiv = $('#owl-carousel');
-    console.log("sd0", $adadsDi);
+    alert("asdsdd");
     $adadsDiv.owlCarousel({
-        loop:false,
+        responsiveClass: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: true
             },
-            768: {
-                items: 3
+            600: {
+                items: 3,
+                nav: false
+            },
+            1000: {
+                items: 5,
+                nav: true,
+                loop: false
             }
         }
     });
@@ -250,22 +258,19 @@ $('.counter').each(function () {
     $({
         countNum: $this.text()
     }).animate({
-            countNum: countTo
+        countNum: countTo
+    }, {
+        duration: 2000,
+        easing: 'linear',
+        step: function () {
+            $this.text(Math.floor(this.countNum));
         },
+        complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+        }
 
-        {
-
-            duration: 2000,
-            easing: 'linear',
-            step: function () {
-                $this.text(Math.floor(this.countNum));
-            },
-            complete: function () {
-                $this.text(this.countNum);
-                //alert('finished');
-            }
-
-        });
+    });
 
 });
 
