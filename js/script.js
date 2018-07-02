@@ -195,27 +195,27 @@ $(function () {
     }
 
     var $adadsDiv = $('#owl-carousel');
-    if ($testimonialsDiv.length && $.fn.owlCarousel) {
-        alert("asdsdd");
-    }
-    $adadsDiv.owlCarousel({
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 3,
-                nav: false
-            },
-            1000: {
-                items: 5,
-                nav: true,
-                loop: false
+    if ($adadsDiv.length && $.fn.owlCarousel) {
+        $adadsDiv.owlCarousel({
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false
+                }
             }
-        }
-    });
+        });
+    }
+    
 
     var $galleryDiv = $('.img-gallery');
     if ($galleryDiv.length && $.fn.owlCarousel) {
