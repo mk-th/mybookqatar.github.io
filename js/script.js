@@ -205,14 +205,27 @@ $(function () {
             dots: false,
             responsiveClass: true,
             responsive: {
-                600: {
+                0: {
                     items: 3,
+                    nav: true
+                },
+                700: {
+                    items: 4,
                     nav: false
+                },
+                800: {
+                    items: 5,
+                    nav: false
+                },
+                1000: {
+                    items: 6,
+                    nav: true,
+                    loop: false
                 }
             }
         });
     }
-    
+
 
     var $galleryDiv = $('.img-gallery');
     if ($galleryDiv.length && $.fn.owlCarousel) {
