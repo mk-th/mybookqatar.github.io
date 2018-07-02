@@ -193,6 +193,10 @@ $(function () {
             navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>']
         });
     }
+    var $adadsDiv = $('.owl-carousel');
+    $adadsDiv.owlCarousel({
+        loop:false
+    });
 
     var $galleryDiv = $('.img-gallery');
     if ($galleryDiv.length && $.fn.owlCarousel) {
