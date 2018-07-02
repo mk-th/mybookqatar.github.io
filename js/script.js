@@ -195,7 +195,9 @@ $(function () {
     }
 
     var $adadsDiv = $('#owl-carousel');
-    alert("asdsdd");
+    if ($testimonialsDiv.length && $.fn.owlCarousel) {
+        alert("asdsdd");
+    }
     $adadsDiv.owlCarousel({
         responsiveClass: true,
         responsive: {
