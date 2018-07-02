@@ -197,10 +197,9 @@ $(function () {
     var $adadsDiv = $('#owl-carousel');
     if ($adadsDiv.length && $.fn.owlCarousel) {
         $adadsDiv.owlCarousel({
-            lazyLoad: true,
             items: 6,
             loop: true,
-            autoplay: 1500,
+            autoplay: true,
             dots: false,
             responsiveClass: true,
             responsive: {
