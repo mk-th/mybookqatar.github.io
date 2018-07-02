@@ -1446,6 +1446,11 @@ h3 {
 }
 
 @media only screen and (max-width: 991px) {
+    .aghjlll {
+        margin-left: auto;
+        margin-right: auto;
+        width: 160px;
+    }
     .dshbsg {
         margin-left: 25%;
     }
@@ -1645,8 +1650,4 @@ h3 {
 
 .slick-arrow.slick-hidden {
     display: none;
-}
-
-.sdjjjj {
-    /* width: 50vw */
 }
