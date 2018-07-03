@@ -1402,6 +1402,18 @@ h3 {
     display: none;
 }
 
+@media (max-width: 1999px) {
+    .smallpaddc {
+        padding-top: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .smallpaddc {
+        padding-top: 0px !important;
+    }
+}
+
 @media only screen and (min-width: 992px) {
     #home {
         height: 76vh;
@@ -1649,5 +1661,54 @@ h3 {
 }
 
 .slick-arrow.slick-hidden {
+    display: none;
+}
+
+#sidebar h4 {
+    font-weight: bold;
+}
+
+.member-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.member-info h4 {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.member-info span {
+    text-transform: uppercase;
+}
+
+.todaysDay {
+    /* color: #5fdba7; */
+}
+
+#glosaf .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* the magic */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+}
+
+#glosaf .red {
+    background-color: rosybrown;
+}
+
+#glosaf .green {
+    background-color: greenyellow;
+}
+
+#glosaf .grey {
+    background-color: grey;
+}
+
+#glosaf .hide {
     display: none;
 }
