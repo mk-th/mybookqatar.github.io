@@ -1712,3 +1712,12 @@ h3 {
 #glosaf .hide {
     display: none;
 }
+
+.sgpppvav {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/about-us.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+}
