@@ -348,7 +348,7 @@ $(document).ready(function () {
     }
 });
 
-var d = new Date("July 11, 2018 13:59:00")
+var d = new Date()
 
 if (d.getDay() == 4) { //Thu
     if (d.getHours() >= 9 && d.getHours() < 15) {
