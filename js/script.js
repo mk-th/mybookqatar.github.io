@@ -343,6 +343,30 @@ $(document).ready(function () {
                 }
             }]
         });
+        // $('.customerxxx-logos').slick({
+        //     initialSlide: randomStart,
+        //     infinite: true,
+        //     lazyLoad: 'ondemand',
+        //     slidesToShow: 12,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 3000,
+        //     arrows: false,
+        //     dots: false,
+        //     accessibility: true,
+        //     pauseOnHover: false,
+        //     responsive: [{
+        //         breakpoint: 768,
+        //         settings: {
+        //             slidesToShow: 8
+        //         }
+        //     }, {
+        //         breakpoint: 520,
+        //         settings: {
+        //             slidesToShow: 6
+        //         }
+        //     }]
+        // });
     } catch (err) {
         console.log("err");
     }
