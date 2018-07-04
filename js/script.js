@@ -190,9 +190,15 @@ $(function () {
             items: 1,
             nav: true,
             dots: false,
-            navText: ['<span class="ti-arrow-left"></span>', '<span class="ti-arrow-right"></span>']
+            loop: true,
+            autoplay: true,
+            navText: ['<span><img src="images/left.png" class="img-fluid xagagzzzz" alt="logo" /></span>', '<span><img src="images/right.png" class="img-fluid xagagzyzzz" alt="logo" /></span>']
         });
     }
+
+    // $('.testimonials .owl-nav').click(function (event) {
+    //     $(this).removeClass('disabled');
+    // });
 
     var $adadsDiv = $('#owl-carousel');
     if ($adadsDiv.length && $.fn.owlCarousel) {
