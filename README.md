@@ -1,2 +1,2 @@
 # website
-Draft v2
+Draft ∞
