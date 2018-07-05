@@ -1847,16 +1847,16 @@ h3 {
 .ahhhhhaagdx {
     font-size: 120px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     color: #FDCA09;
     text-transform: uppercase;
 }
 
 .ahxxxddhaagdx {
     margin-top: -50px;
+    font-weight: 900;
     font-size: 34px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
     text-transform: uppercase;
     color: #333333;
     padding-left: 2px;
