@@ -1866,3 +1866,9 @@ h3 {
 .card {
     background-color: #f7fbfe;
 }
+
+@media (min-width: 1200px) {
+    .cppafdb {
+        margin-top: 5%;
+    }
+}
