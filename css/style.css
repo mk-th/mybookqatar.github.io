@@ -1847,7 +1847,7 @@ h3 {
 .ahhhhhaagdx {
     font-size: 120px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     color: #FDCA09;
     text-transform: uppercase;
 }
@@ -1856,7 +1856,7 @@ h3 {
     margin-top: -50px;
     font-size: 34px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
     color: #333333;
     padding-left: 2px;
@@ -1875,6 +1875,7 @@ h3 {
     }
 }
 
-#buy-my-book .card-head, #buy-my-book .card-body{
+#buy-my-book .card-head,
+#buy-my-book .card-body {
     background: white;
 }
