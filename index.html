@@ -211,23 +211,21 @@ URI     : https://colorlib.com
     </div>
     <header></header>
     <div class="nav-gradient" id="home">
-        <video autoplay="autoplay" id="myvid" loop="loop" muted="muted" playsinline="playsinline" class="banner__video" poster="images/video-poster.png">
-            <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.webm" type="video/webm"> -->
-            <!-- <source src="https://pawelgrzybek.com/photos/2015-12-06-codepen.mp4" type="video/mp4"> -->
-            <source src="videos/test-landscape.webm" type="video/webm" />
-            <source src="videos/test-landscape.mp4" type="video/mp4" />
+        <video autoplay="autoplay" id="myvid" loop="loop" muted="muted" playsinline="playsinline" class="banner__video" poster="images/bg-poster.png">
+            <!-- <source src="videos/bg-landscape.webm" type="video/webm" /> -->
+            <source src="videos/bg-landscape.mp4" type="video/mp4" />
         </video>
 
         <script>
             if ($(window).width() <= 991) {
-                var videoFile = 'videos/test-portrait.webm';
+                var videoFile = 'videos/bg-portrait.mp4';
                 $('#myvid source').attr('src', videoFile);
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();
             }
 
             if ($(window).width() >= 992) {
-                var videoFile = 'videos/test-landscape.webm';
+                var videoFile = 'videos/bg-landscape.mp4';
                 $('#myvid source').attr('src', videoFile);
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();
@@ -237,7 +235,10 @@ URI     : https://colorlib.com
             <div class="row" style="height: 100%;">
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="img-holder mt-5">
-                        <img src="images/video-long.gif" width="380" alt="animated" />
+                        <!-- <img src="images/app-portrait.gif" width="380" alt="animated" /> -->
+                        <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="cpppsf" poster="images/app-portrait.png">
+                            <source src="videos/app-portrait.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 xssa" id="fgaaga">

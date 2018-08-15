@@ -67,7 +67,7 @@ $(document).ready(function () {
             $("#fb-root").html(null);
             $("#spopup").html(null);
             try {
-                var videoFile = 'videos/test-portrait.webm';
+                var videoFile = 'videos/bg-portrait.mp4';
                 $('#myvid source').attr('src', videoFile);
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();
@@ -79,7 +79,7 @@ $(document).ready(function () {
         if ($(window).width() >= 992) {
             // $("#fb-root").html(null);
             try {
-                var videoFile = 'videos/test-landscape.webm';
+                var videoFile = 'videos/bg-landscape.mp4';
                 $('#myvid source').attr('src', videoFile);
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();

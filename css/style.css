@@ -1879,3 +1879,24 @@ h3 {
 #buy-my-book .card-body {
     background: white;
 }
+
+.cpppsf {
+    width: 380px;
+    /* height: 826px; */
+}
+
+@media only screen and (max-width: 991px) {
+    .img-holder video {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: table-cell;
+    }
+}
+
+@media (max-width:767px) {
+    .img-holder video {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
