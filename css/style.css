@@ -1897,7 +1897,7 @@ h3 {
 @media (max-width:767px) {
     .img-holder video {
         width: 85%;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 }
 
