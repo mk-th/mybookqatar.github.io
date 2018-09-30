@@ -1157,10 +1157,10 @@ h3 {
 }
 
 .woobox-offer {
-    max-width: 100% !important;
+    /* max-width: 100% !important;
     height: 450px;
     overflow: hidden !important;
-    margin: auto;
+    margin: auto; */
 }
 
 .page-component .input-group .inputs,
