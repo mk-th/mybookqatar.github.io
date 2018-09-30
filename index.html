@@ -52,6 +52,8 @@ URI     : https://colorlib.com
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
     </link>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -269,9 +271,18 @@ URI     : https://colorlib.com
                     <div class="call-to-action sdasf mt-5">
                         <div class="xxxxsda">
                             <h1 class="bliim">My Book Qatar</h1>
-                            <p class="tagline" style="width: 85%;">Your one-stop destination for 2 for 1 offers in
-                                Qatar. Join today start saving with 1500+ offers
-                                from 475+ outlets.</p>
+                            <p class="tagline" style="width: 85%;">
+                                Your one-stop destination for 2 for 1 offers in Qatar. Join today start saving
+                                with
+                                <span id="taglinexs">
+                                    <img class="xgddga1" src="images/loader.webp" alt="Loading...">
+                                </span>
+                                offers from
+                                <span id="taglinexys">
+                                    <img class="xgddga1" src="images/loader.webp" alt="Loading...">
+                                </span>
+                                outlets.
+                            </p>
                             <!-- <h2>Download our App for Free</h2> -->
                             <br>
                             <p class="tagline">Now, Available in the App Store</p>

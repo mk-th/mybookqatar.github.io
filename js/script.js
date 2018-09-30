@@ -74,7 +74,7 @@ $(document).ready(function () {
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();
             } catch (err) { //We can also throw from try block and catch it here
-                console.log("err");
+                // console.log("err");
             }
         }
 
@@ -89,6 +89,58 @@ $(document).ready(function () {
                 console.log("err");
             }
         }
+    }
+
+
+    // Initialize Firebase
+
+    var config = {
+        apiKey: "AIzaSyArCQMJGfncTdxllXugahAapUH5UZqJh9I",
+        authDomain: "mbqmerchstats.firebaseapp.com",
+        databaseURL: "https://mbqmerchstats.firebaseio.com",
+        projectId: "mbqmerchstats",
+        storageBucket: "mbqmerchstats.appspot.com",
+        messagingSenderId: "117123414878"
+    };
+    firebase.initializeApp(config);
+
+    var dbRef = firebase.database().ref().child('stats');
+    dbRef.on('value', listData, null);
+
+    function listData(data) {
+        window.stats = data.val();
+        try {
+            document.getElementById("taglinexs").innerHTML = stats["totaloffersPlus"];
+        }
+        catch (err) {
+            // console.log("err");
+        }
+        try {
+            document.getElementById("taglinexys").innerHTML = stats["totalmerchantsPlus"];
+        }
+        catch (err) {
+            // console.log("err");
+        }
+        try {
+            document.getElementById("taglinexsxx").innerHTML = stats["totalmerchantsPlus"];
+        }
+        catch (err) {
+            // console.log("err");
+        }
+
+        var i = 0;
+        $('.counter').each(function () {
+            if (i == 0) {
+                this.innerHTML = window.stats["totaloffers"] - 100;
+            } else if (i == 1) {
+                this.innerHTML = window.stats["totalmerchants"] - 50;
+            } else {
+                this.innerHTML = window.stats["totalsavings"] - 10000;
+            }
+
+            i++;
+
+        });
     }
 
 
@@ -265,28 +317,57 @@ $(function () {
 // }, 500);
 // });
 
-$('.counter').each(function () {
-    var $this = $(this),
-        countTo = $this.attr('data-count');
-
-    $({
-        countNum: $this.text()
-    }).animate({
-        countNum: countTo
-    }, {
-        duration: 2000,
-        easing: 'linear',
-        step: function () {
-            $this.text(Math.floor(this.countNum));
-        },
-        complete: function () {
-            $this.text(this.countNum);
-            //alert('finished');
-        }
-
-    });
-
+$(window).scroll(function () {
+    var dbRef = firebase.database().ref().child('stats');
+    dbRef.on('value', listData1, null);
 });
+
+function listData1(data) {
+    window.stats = data.val();
+    try {
+        var hT = $('#numbers').offset().top,
+            hH = $('#numbers').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+        if (wS > (hT + hH - wH)) {
+            var i = 0;
+            $('.counter').each(function () {
+                var $this = $(this);
+                if (i == 0) {
+                    countTo = window.stats["totaloffers"];
+                } else if (i == 1) {
+                    countTo = window.stats["totalmerchants"];
+                } else {
+                    countTo = window.stats["totalsavings"];
+                }
+
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                }, {
+                        duration: 2000,
+                        easing: 'linear',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+                i++;
+
+            });
+        }
+    }
+    catch (err) {
+        // console.log("err");
+    }
+}
+
+
 
 $(window).scroll(function () {
     if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
@@ -377,6 +458,6 @@ $(document).ready(function () {
         //     }]
         // });
     } catch (err) {
-        console.log("err");
+        // console.log("err");
     }
 });
