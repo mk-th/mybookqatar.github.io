@@ -106,18 +106,16 @@ URI     : https://colorlib.com
 
     <div id='woobox-root'></div>
     <script>
-        $(function () {
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://woobox.com/js/plugins/woo.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'woobox-sdk'));
-        });
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://woobox.com/js/plugins/woo.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'woobox-sdk'));
     </script>
-
+    
     <!-- Return to Top -->
     <!-- <a href="javascript:" id="return-to-top">
         <i class="fa fa-angle-double-up fa-5"></i>
