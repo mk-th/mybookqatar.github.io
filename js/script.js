@@ -109,19 +109,31 @@ $(document).ready(function () {
     function listData(data) {
         window.stats = data.val();
         try {
-            document.getElementById("taglinexs").innerHTML = stats["totaloffersPlus"];
+            document.getElementById("totaloffersPlus").innerHTML = stats["totaloffersPlus"];
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementById("taglinexys").innerHTML = stats["totalmerchantsPlus"];
+            document.getElementById("totaloffers").innerHTML = stats["totaloffers"];
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementById("taglinexsxx").innerHTML = stats["totalmerchantsPlus"];
+            document.getElementById("totalmerchantsPlus").innerHTML = stats["totalmerchantsPlus"];
+        }
+        catch (err) {
+            // console.log("err");
+        }
+        try {
+            document.getElementById("totalmerchants").innerHTML = stats["totalmerchants"];
+        }
+        catch (err) {
+            // console.log("err");
+        }
+        try {
+            document.getElementById("totalsavings").innerHTML = stats["totalsavings"];
         }
         catch (err) {
             // console.log("err");
