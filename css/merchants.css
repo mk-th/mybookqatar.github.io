@@ -364,12 +364,12 @@
       height: 9vh;
   }
 
-  #our-merchants span:visited,
+  #lo-merchants span:visited,
   .currentLink {
       text-decoration: none;
   }
 
-  #our-merchants span:hover,
+  #lo-merchants span:hover,
   .currentLink {
       text-decoration: underline;
   }
