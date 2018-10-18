@@ -98,3 +98,7 @@
   .currentLink {
       text-decoration: none;
   }
+
+  .sidenav-icon {
+      margin-right: 5px;
+  }
