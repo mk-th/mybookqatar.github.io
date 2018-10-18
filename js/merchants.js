@@ -288,7 +288,7 @@ $(document).ready(function () {
     }
 
     $('.search-query').on('input', function (e) {
-        $('#replaceWhenSmall .currentLink').removeClass('currentLink');
+        $('#our-merchants .currentLink').removeClass('currentLink');
         listDataAll(window.dbRef);
 
         $('#results').find('.accordion-toggle').click(function () {
@@ -318,7 +318,7 @@ $(document).ready(function () {
     $('.link-btn').click(function () {
         $("#results").html("");
         $('.search-query').val("");
-        $('#replaceWhenSmall .currentLink').removeClass('currentLink');
+        $('#our-merchants .currentLink').removeClass('currentLink');
         this.className = "link-btn currentLink";
         if (this.id === "food-btn") {
             listDataAppend(window.dbRef["food"], "food");
