@@ -40,6 +40,10 @@
       cursor: pointer;
   }
 
+  #lo-merchants .link-btn {
+      margin-right: 10px;
+  }
+
   .accordion-toggle {
       cursor: pointer;
       margin: 0;
@@ -93,8 +97,4 @@
   #lo-merchants span:visited,
   .currentLink {
       text-decoration: none;
-  }
-
-  .currentLink {
-      text-decoration: underline;
   }
