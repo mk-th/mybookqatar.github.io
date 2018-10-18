@@ -32,12 +32,13 @@
       font-weight: bold;
   }
 
-  /* .link-btn:hover,
+  .link-btn:hover,
   .link-btn:visited,
   .link-btn:active,
   .link-btn {
       text-decoration: none;
-  } */
+      cursor: pointer;
+  }
 
   .accordion-toggle {
       cursor: pointer;
@@ -81,7 +82,6 @@
       padding: 10px;
       padding-right: 30px;
       border-radius: 25px;
-      /* background-image: url("../images/search-light.png") no-repeat scroll 150px 7px; Changed this latest*/
       background-image: url("../images/search-light.png") no-repeat scroll 100% 7px;
       background-size: 10px;
   }
