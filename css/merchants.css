@@ -50,7 +50,7 @@
   }
 
   .currentLink {
-      text-decoration: none;
+      /* text-decoration: none; */
       font-weight: bold;
   }
 
@@ -61,7 +61,7 @@
       text-decoration: none;
   }
 
-  .currentLink:link {
+  /* .currentLink:link {
       text-decoration: none;
       color: black;
   }
@@ -79,7 +79,7 @@
   .currentLink:active {
       text-decoration: none;
       color: black;
-  }
+  } */
 
   .accordion-toggle {
       cursor: pointer;
@@ -362,4 +362,14 @@
 
   footer {
       height: 9vh;
+  }
+
+  #our-merchants span:visited,
+  .currentLink {
+      text-decoration: none;
+  }
+
+  #our-merchants span:hover,
+  .currentLink {
+      text-decoration: underline;
   }
