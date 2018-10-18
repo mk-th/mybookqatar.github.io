@@ -1,9 +1,3 @@
-  .footercontact-icon {
-      margin-bottom: 5px;
-      margin-right: 5px;
-      height: 15px;
-  }
-
   .showTag {
       display: block !important;
   }
@@ -12,22 +6,7 @@
       display: none;
   }
 
-  .media-icons:hover {
-      text-decoration: none;
-  }
-
-  .media-icons a {
-      display: inline-block;
-  }
-
-  .media-icons a img {
-      display: block;
-  }
-
-  .media-icons {
-      margin-top: 4px;
-  }
-
+  /*
   body::-webkit-scrollbar-track,
   div::-webkit-scrollbar-track,
       {
@@ -36,7 +15,7 @@
       background-color: #F5F5F5;
   }
 
-  body::-webkit-scrollbar,
+ body::-webkit-scrollbar,
   div::-webkit-scrollbar {
       width: 8px;
       background-color: #F5F5F5;
@@ -47,38 +26,17 @@
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
       background-color: #555;
-  }
+  } */
 
   .currentLink {
-      /* text-decoration: none; */
       font-weight: bold;
   }
 
-  .link-btn:hover,
+  /* .link-btn:hover,
   .link-btn:visited,
   .link-btn:active,
   .link-btn {
       text-decoration: none;
-  }
-
-  /* .currentLink:link {
-      text-decoration: none;
-      color: black;
-  }
-
-  .currentLink:visited {
-      text-decoration: none;
-      color: black;
-  }
-
-  .currentLink:hover {
-      text-decoration: none;
-      color: black;
-  }
-
-  .currentLink:active {
-      text-decoration: none;
-      color: black;
   } */
 
   .accordion-toggle {
@@ -95,31 +53,9 @@
       display: block;
   }
 
-  /* Remove the navbar's default margin-bottom and rounded borders */
-
   .navbar {
       margin-bottom: 0;
       border-radius: 0;
-  }
-
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-  .row.content {
-      height: 450px
-  }
-
-  /* Set gray background color and 100% height */
-
-  #removeClass,
-  #myNavbar,
-  #replaceWhenSmalls {
-      list-style-type: none;
-  }
-
-  .sidenav {
-      padding-top: 15px;
-      background-color: #f1f1f1;
-      height: 100%;
   }
 
   .ruru {
@@ -127,182 +63,14 @@
       text-indent: 10px;
   }
 
-  /* Set black background color, white text and some padding */
-
-  footer {
-      background-color: #fff;
-      color: #000;
-      padding: 15px 0;
-      padding: 0 !important;
-      padding-top: 20px !important;
-      border-top: 1px solid black;
-      font-size: smaller;
-  }
-
-  /* On small screens, set height to 'auto' for sidenav and grid */
-
-  @media screen and (max-width: 767px) {
-      .search-query {
-          width: 100%;
-          background-image: url("../images/search-light.png") no-repeat scroll 95% 7px !important;
-          background-size: 10px !important;
-      }
-      .navbar {
-          margin-bottom: 15px;
-      }
-      .col-sm-10,
-      .col-sm-2 {
-          padding-right: 0 !important;
-          padding-left: 0 !important;
-      }
-      #results {
-          /* height: 170px !important; */
-          /* height: 286px !important; Changed in v2.0 */
-          height: 100vh !important;
-      }
-      .middle {
-          margin-bottom: 15px;
-      }
-      footer .navbar-header {
-          margin-left: auto !important;
-          margin-right: auto !important;
-          width: 225px;
-          height: 50px;
-      }
-      #replaceWhenSmall {
-          margin-bottom: 30px;
-      }
-      #myNavbar ul {
-          margin-left: auto !important;
-          margin-right: auto !important;
-          width: 100%;
-          text-align: center;
-          padding: 0;
-      }
-      .sidenav {
-          height: auto;
-          padding: 15px;
-      }
-      .row.content {
-          height: auto;
-      }
-      .navbar-header {
-          height: 100px;
-      }
-      .navbar-brand {
-          width: 100%;
-      }
-      #myNavbar h1 {
-          font-size: 25px;
-      }
-      .navbar .navbar-header img {
-          margin-left: auto;
-          margin-top: 10px;
-          margin-right: auto;
-      }
-      #replaceWhenSmall p {
-          display: inline;
-          margin-right: 20px !important;
-      }
-      body {
-          margin: 20px;
-      }
-      .laza {
-          width: 100% !important;
-      }
-      #replaceWhenSmalls ul {
-          margin-left: auto !important;
-          margin-right: auto !important;
-          width: 100%;
-          text-align: center;
-      }
-  }
-
   .accordion-icon {
       margin-left: 5px;
-  }
-
-  /* Zameel Custom CSS/ */
-
-  .sidenav-icon {
-      margin-right: 10px;
-  }
-
-  .navbar-default,
-  .sidenav {
-      background-color: #fff !important;
-  }
-
-  /* On small screens, set height to 'auto' for sidenav and grid */
-
-  @media screen and (min-width: 1024px) {
-      body {
-          width: 75%;
-          margin-left: auto;
-          margin-right: auto;
-      }
-  }
-
-  .paddingblt20 {
-      padding-top: 15px;
   }
 
   .gaga,
   .ruru {
       display: block;
       margin-bottom: 5px;
-  }
-
-  .big-red {
-      font-size: 20px;
-      color: #dc052b;
-      font-weight: bold;
-  }
-
-  .float-left {
-      float: left;
-      margin-right: 10px;
-  }
-
-  #myNavbar {
-      padding: 0;
-  }
-
-  body {
-      font-family: 'Quicksand', sans-serif;
-  }
-
-  h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 22px;
-  }
-
-  .navbar {
-      border: none !important;
-      padding-bottom: 20px;
-  }
-
-  .bordermarg-btm {
-      border-bottom: 1px solid black;
-      margin-bottom: 15px;
-  }
-
-  .col-sm-10 {
-      padding-right: 0;
-  }
-
-  .sidenav,
-  .navbar .container-fluid {
-      padding-left: 0;
-  }
-
-  .navbar {
-      padding-bottom: 0;
-  }
-
-  .middle {
-      /* height: 521px; Changed in v3.0  */
-      /* overflow: hidden; */
   }
 
   .search-query {
@@ -320,48 +88,6 @@
 
   .search-query::-webkit-input-placeholder {
       font-size: 10px;
-  }
-
-  .laza {
-      margin-left: auto;
-      margin-right: auto;
-      /* width: 175px; Changed this latest*/
-      width: 100%;
-  }
-
-  .navbar-collapse.collapse {
-      display: block !important;
-  }
-
-  .navbar-nav>li,
-  .navbar-nav {
-      float: left !important;
-  }
-
-  .navbar-nav.navbar-right:last-child {
-      margin-right: -15px !important;
-  }
-
-  .navbar-right {
-      float: right !important;
-  }
-
-  .navbar-brand img {
-      width: 175px;
-  }
-
-  #top {
-      height: 11vh;
-  }
-
-  .middle {
-      /* height: 78vh; Changed in v2.0 */
-      /* height: 100vh;  Changed in v3.0  */
-      height: 100%;
-  }
-
-  footer {
-      height: 9vh;
   }
 
   #lo-merchants span:visited,
