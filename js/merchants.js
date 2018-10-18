@@ -17,27 +17,6 @@ $(document).ready(function () {
         });
     }
 
-    const mq = window.matchMedia("(min-width: 767px)");
-
-    if (matchMedia) {
-        const mq = window.matchMedia("(min-width: 500px)");
-        mq.addListener(WidthChange);
-        WidthChange(mq);
-    }
-
-    function WidthChange(mq) {
-        if (mq.matches) {
-            $("#removeClass").addClass("nav navbar-nav navbar-right");
-            $("#replaceWhenSmall").html('<p> <a href="#" id="food-btn" class="link-btn"> <img src="images/food.png" alt="Food & Drinks Icon" height="25px" class="sidenav-icon">Food &amp; Drinks</a> </p> <p> <a href="#" id="plea-btn" class="link-btn"> <img src="images/plea.png" alt="Pleasure & Leisure Icon" height="25px" class="sidenav-icon">Pleasure &amp; Leisure</a> </p> <p> <a href="#" id="heal-btn" class="link-btn"> <img src="images/heal.png" alt="Health & Fitness Icon" height="25px" class="sidenav-icon">Health &amp; Fitness</a> </p> <p> <a href="#" id="beau-btn" class="link-btn"> <img src="images/beau.png" alt="Beauty & Spas Icon" height="25px" class="sidenav-icon">Beauty &amp; Spas</a> </p> <p> <a href="#" id="svc-btn" class="link-btn"> <img src="images/svc.png" alt="Services Icon" height="25px" class="sidenav-icon">Services</a> </p> <p> <a href="#" id="stc-btn" class="link-btn"> <img src="images/stc.png" alt="Staycations Icon" height="25px" class="sidenav-icon">Staycations</a> </p>');
-            $("#replaceWhenSmalls").html('<ul class="nav navbar-nav navbar-right"> <li> <p> Copyright © <span class="currentYear">2016</span> My Book Qatar <br> Retaj Building, 3rd Floor, Office #311, Al Sadd, <br> P.O. Box. 37556 - Doha, Qatar | www.mybookqatar.com </p> </li> </ul>');
-        } else {
-            $("#removeClass").removeAttr('class');
-            $("#replaceWhenSmall").html('<p> <a href="#" id="food-btn" class="link-btn"> <img src="images/food.png" alt="Food & Drinks Icon" height="25px" class="sidenav-icon">Food &amp; Drinks</a> </p> <p> <a href="#" id="plea-btn" class="link-btn"> <img src="images/plea.png" alt="Pleasure & Leisure Icon" height="25px" class="sidenav-icon">Pleasure &amp; Leisure</a> </p> <br><br> <p> <a href="#" id="heal-btn" class="link-btn"> <img src="images/heal.png" alt="Health & Fitness Icon" height="25px" class="sidenav-icon">Health &amp; Fitness</a> </p> <p> <a href="#" id="beau-btn" class="link-btn"> <img src="images/beau.png" alt="Beauty & Spas Icon" height="25px" class="sidenav-icon">Beauty &amp; Spas</a> </p> <br><br> <p> <a href="#" id="svc-btn" class="link-btn"> <img src="images/svc.png" alt="Services Icon" height="25px" class="sidenav-icon">Services</a> </p> <p> <a href="#" id="stc-btn" class="link-btn"> <img src="images/stc.png" alt="Staycations Icon" height="25px" class="sidenav-icon">Staycations</a> </p>');
-            $("#replaceWhenSmalls").html('<ul class="nav navbar-nav navbar-right"> <p> Copyright © <span class="currentYear">2016</span> My Book Qatar <br> Retaj Building, 3rd Floor, Office #311, Al Sadd, <br> P.O. Box. 37556 - Doha, Qatar | www.mybookqatar.com </p> </ul>');
-        }
-        $('.currentYear').text((new Date()).getFullYear());
-    }
-
     function processAndPostData(allText) {
         var allTextLines = allText.split(/\r\n|\n/);
         var headers = allTextLines[0].split(',');
