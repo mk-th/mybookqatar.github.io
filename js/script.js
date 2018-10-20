@@ -331,6 +331,29 @@ $(function () {
 $(window).scroll(function () {
     var dbRef = firebase.database().ref().child('stats');
     dbRef.on('value', listData, null);
+
+    var wS1 = $(this).scrollTop();
+
+    console.log("wS1", wS1);
+    // if(){
+    //     wS = 100;
+    // }
+
+    const mq = window.matchMedia("(min-width: 767px)");
+
+    if (matchMedia) {
+        const mq = window.matchMedia("(min-width: 500px)");
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+    }
+
+    function WidthChange(mq) {
+        if (mq.matches) {
+            console.log("true");
+        } else {
+            console.log("false");
+        }
+    }
 });
 
 function listData(data) {
@@ -341,26 +364,6 @@ function listData(data) {
             wH = $(window).height(),
             wS = $(this).scrollTop();
 
-        console.log("wS", wS);
-        // if(){
-        //     wS = 100;
-        // }
-
-        const mq = window.matchMedia("(min-width: 767px)");
-
-        if (matchMedia) {
-            const mq = window.matchMedia("(min-width: 500px)");
-            mq.addListener(WidthChange);
-            WidthChange(mq);
-        }
-
-        function WidthChange(mq) {
-            if (mq.matches) {
-                console.log("true");
-            } else {
-                console.log("false");
-            }
-        }
 
         if (wS > (hT + hH - wH)) {
             var i = 0;
