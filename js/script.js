@@ -339,14 +339,6 @@ if (matchMedia) {
 function WidthChange(mq) {
     if (mq.matches) {
         console.log("true");
-
-        var dbRef = firebase.database().ref().child('stats');
-        try {
-            dbRef.on('value', listData, null);
-        }
-        catch (err) {
-            // console.log("err", err);
-        }
     } else {
         console.log("false");
     }
