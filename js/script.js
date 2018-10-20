@@ -328,9 +328,23 @@ $(function () {
 // }, 500);
 // });
 
+var dbRef = firebase.database().ref().child('stats');
+
 $(window).scroll(function () {
-    var dbRef = firebase.database().ref().child('stats');
-    dbRef.on('value', listData, null);
+    try {
+        var hT = $('#numbers').offset().top,
+            hH = $('#numbers').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+
+
+        if (wS > (hT + hH - wH)) {
+            dbRef.on('value', listData, null);
+        }
+    }
+    catch (err) {
+        // console.log("err");
+    }
 
     var wS1 = $(this).scrollTop();
 
@@ -358,49 +372,36 @@ $(window).scroll(function () {
 
 function listData(data) {
     window.stats = data.val();
-    try {
-        var hT = $('#numbers').offset().top,
-            hH = $('#numbers').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
 
+    var i = 0;
+    $('.counter').each(function () {
+        var $this = $(this);
+        if (i == 0) {
+            countTo = window.stats["totaloffers"];
+        } else if (i == 1) {
+            countTo = window.stats["totalmerchants"];
+        } else {
+            countTo = window.stats["totalsavings"];
+        }
 
-        if (wS > (hT + hH - wH)) {
-            var i = 0;
-            $('.counter').each(function () {
-                var $this = $(this);
-                if (i == 0) {
-                    countTo = window.stats["totaloffers"];
-                } else if (i == 1) {
-                    countTo = window.stats["totalmerchants"];
-                } else {
-                    countTo = window.stats["totalsavings"];
+        $({
+            countNum: $this.text()
+        }).animate({
+            countNum: countTo
+        }, {
+                duration: 2000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                    //alert('finished');
                 }
 
-                $({
-                    countNum: $this.text()
-                }).animate({
-                    countNum: countTo
-                }, {
-                        duration: 2000,
-                        easing: 'linear',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                            //alert('finished');
-                        }
-
-                    });
-                i++;
-
             });
-        }
-    }
-    catch (err) {
-        // console.log("err");
-    }
+        i++;
+    });
 }
 
 
