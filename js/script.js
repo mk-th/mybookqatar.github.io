@@ -346,9 +346,9 @@ $(window).scroll(function () {
         // console.log("err");
     }
 
-    var wS1 = $(this).scrollTop();
+    var wSTest = $(this).scrollTop();
 
-    console.log("wS1", wS1);
+    console.log("wSTest", wSTest);
     // if(){
     //     wS = 100;
     // }
