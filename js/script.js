@@ -328,20 +328,20 @@ $(function () {
 // }, 500);
 // });
 
-const mq = window.matchMedia("(min-width: 767px)");
+var dbRef = firebase.database().ref().child('stats');
+try {
+    var hT = $('#numbers').offset().top,
+        hH = $('#numbers').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
 
-if (matchMedia) {
-    const mq = window.matchMedia("(min-width: 500px)");
-    mq.addListener(WidthChange);
-    WidthChange(mq);
-}
 
-function WidthChange(mq) {
-    if (mq.matches) {
-        console.log("true");
-    } else {
-        console.log("false");
+    if (wS > (hT + hH - wH)) {
+        dbRef.on('value', listData, null);
     }
+}
+catch (err) {
+    // console.log("err");
 }
 
 $(window).scroll(function () {
