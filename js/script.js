@@ -369,12 +369,15 @@ $(window).scroll(function () {
 });
 
 function listData(data) {
+    console.log("listData called");
+
     window.stats = data.val();
 
     var i = 0;
     $('.counter').each(function () {
         var $this = $(this);
         if (i == 0) {
+            console.log("counter called");
             countTo = window.stats["totaloffers"];
         } else if (i == 1) {
             countTo = window.stats["totalmerchants"];
@@ -399,6 +402,7 @@ function listData(data) {
 
             });
         i++;
+        console.log("all called");
     });
 }
 
