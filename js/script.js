@@ -86,7 +86,7 @@ $(document).ready(function () {
                 $("#myvid")[0].load();
                 $("#myvid")[0].play();
             } catch (err) { //We can also throw from try block and catch it here
-                console.log("err");
+                // console.log("err");
             }
         }
     }
@@ -358,7 +358,7 @@ $(window).scroll(function () {
         }
     }
     catch (err) {
-        // console.log("err", err);
+        // console.log("err");
     }
 });
 
@@ -369,7 +369,6 @@ function listData(data) {
     $('.counter').each(function () {
         var $this = $(this);
         if (i == 0) {
-            // console.log("counter called");
             countTo = window.stats["totaloffers"];
         } else if (i == 1) {
             countTo = window.stats["totalmerchants"];
@@ -394,7 +393,6 @@ function listData(data) {
 
             });
         i++;
-        // console.log("all called");
     });
 }
 
