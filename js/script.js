@@ -341,7 +341,7 @@ $(window).scroll(function () {
         }
     }
     catch (err) {
-        console.log("err");
+        console.log("err", err);
     }
 
     var wSTest = $(this).scrollTop();
@@ -361,9 +361,9 @@ $(window).scroll(function () {
 
     function WidthChange(mq) {
         if (mq.matches) {
-            console.log("true");
+            // console.log("true");
         } else {
-            console.log("false");
+            // console.log("false");
         }
     }
 });
@@ -377,7 +377,7 @@ function listData(data) {
     $('.counter').each(function () {
         var $this = $(this);
         if (i == 0) {
-            console.log("counter called");
+            // console.log("counter called");
             countTo = window.stats["totaloffers"];
         } else if (i == 1) {
             countTo = window.stats["totalmerchants"];
@@ -402,7 +402,7 @@ function listData(data) {
 
             });
         i++;
-        console.log("all called");
+        // console.log("all called");
     });
 }
 
