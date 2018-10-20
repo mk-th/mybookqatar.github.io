@@ -103,8 +103,8 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
-    var dbRef = firebase.database().ref().child('stats');
-    dbRef.on('value', listData, null);
+    window.dbRef = firebase.database().ref().child('stats');
+    window.dbRef.on('value', listData, null);
 
     function listData(data) {
         window.stats = data.val();
@@ -337,7 +337,7 @@ $(window).scroll(function () {
 
 
         if (wS > (hT + hH - wH)) {
-            dbRef.on('value', listData, null);
+            window.dbRef.on('value', listData, null);
         }
     }
     catch (err) {
