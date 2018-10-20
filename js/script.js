@@ -39,18 +39,18 @@ Copyright © All rights Reserved
 
 // })(jQuery);
 
-var win = $(window);
+// var win = $(window);
 
-var hidePopUp = false;
+// var hidePopUp = false;
 
-var allMods = $(".module");
+// var allMods = $(".module");
 
-allMods.each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-        el.addClass("already-visible");
-    }
-});
+// allMods.each(function (i, el) {
+//     var el = $(el);
+//     if (el.visible(true)) {
+//         el.addClass("already-visible");
+//     }
+// });
 
 $(document).ready(function () {
     window.onresize = videoResize;
@@ -342,7 +342,7 @@ $(window).scroll(function () {
 
 
         if (wS > (hT + hH - wH)) {
-            dbRef.on('value', listData, null);
+            dbRef.on('value', listDataMerchantPage, null);
         }
     }
     catch (err) {
