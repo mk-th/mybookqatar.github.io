@@ -341,7 +341,7 @@ $(window).scroll(function () {
         }
     }
     catch (err) {
-        // console.log("err");
+        console.log("err");
     }
 
     var wSTest = $(this).scrollTop();
