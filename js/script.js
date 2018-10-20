@@ -103,8 +103,8 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config);
 
-    window.dbRef = firebase.database().ref().child('stats');
-    window.dbRef.on('value', listData, null);
+    var dbRef = firebase.database().ref().child('stats');
+    dbRef.on('value', listData, null);
 
     function listData(data) {
         window.stats = data.val();
@@ -329,6 +329,7 @@ $(function () {
 // });
 
 $(window).scroll(function () {
+    var dbRef = firebase.database().ref().child('stats');
     try {
         var hT = $('#numbers').offset().top,
             hH = $('#numbers').outerHeight(),
@@ -337,7 +338,7 @@ $(window).scroll(function () {
 
 
         if (wS > (hT + hH - wH)) {
-            window.dbRef.on('value', listData, null);
+            dbRef.on('value', listData, null);
         }
     }
     catch (err) {
