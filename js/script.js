@@ -33,6 +33,8 @@ Copyright © All rights Reserved
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
 
+        console.log("called")
+
         return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
     };
@@ -52,19 +54,10 @@ allMods.each(function (i, el) {
     }
 });
 
-// win.scroll(function (event) {
-//     allMods.each(function (i, el) {
-//         var el = $(el);
-//         if (el.visible(true)) {
-//             el.addClass("come-in");
-//         }
-//     });
-// });
-
 $(document).ready(function () {
-    window.onresize = doALoadOfStuff;
+    window.onresize = videoResize;
 
-    function doALoadOfStuff() {
+    function videoResize() {
         if ($(window).width() <= 991) {
             $("#fb-root").html(null);
             $("#spopup").html(null);
@@ -104,9 +97,9 @@ $(document).ready(function () {
     firebase.initializeApp(config);
 
     var dbRef = firebase.database().ref().child('stats');
-    dbRef.on('value', listData, null);
+    dbRef.on('value', listDataStats, null);
 
-    function listData(data) {
+    function listDataStats(data) {
         window.stats = data.val();
         try {
             document.getElementById("totaloffersPlus").innerHTML = stats["totaloffersPlus"];
@@ -154,29 +147,52 @@ $(document).ready(function () {
         });
     }
 
+    var dbRef = firebase.database().ref().child('stats');
+    try {
+        var hT = $('#numbers').offset().top,
+            hH = $('#numbers').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
 
-    /* Every time the window is scrolled ... */
-    // $(window).scroll(function () {
 
-    /* Check the location of each desired element */
-    // $('.hideme').each(function (i) {
+        if (wS > (hT + hH - wH)) {
+            dbRef.on('value', listDataMerchantPage, null);
+        }
+    }
+    catch (err) {
+        // console.log("err");
+    }
 
-    // var bottom_of_object = $(this).position().top + $(this).outerHeight();
-    // var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* If the object is completely visible in the window, fade it it */
-    // if (bottom_of_window > bottom_of_object) {
-
-    // $(this).animate({
-    // 'opacity': '1'
-    // }, 1500);
-
-    // }
-
-    // });
-
-    // });
-
+    try {
+        var slideCount = $('.customer-logos > div').length;
+        var randomStart = Math.floor(Math.random() * slideCount);
+        $('.customer-logos').slick({
+            initialSlide: randomStart,
+            infinite: true,
+            lazyLoad: 'ondemand',
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            accessibility: true,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    } catch (err) {
+        // console.log("err");
+    }
 });
 
 $(function () {
@@ -314,37 +330,11 @@ $(function () {
 
 }); /* End Fn */
 
-// ===== Scroll to Top ==== 
-// $(window).scroll(function () {
-// if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
-// $('#return-to-top').fadeIn(200); // Fade in the arrow
-// } else {
-// $('#return-to-top').fadeOut(200); // Else fade out the arrow
-// }
-// });
-// $('#return-to-top').click(function () { // When arrow is clicked
-// $('body,html').animate({
-// scrollTop: 0 // Scroll to top of body
-// }, 500);
-// });
-
-var dbRef = firebase.database().ref().child('stats');
-try {
-    var hT = $('#numbers').offset().top,
-        hH = $('#numbers').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-
-
-    if (wS > (hT + hH - wH)) {
-        dbRef.on('value', listData, null);
-    }
-}
-catch (err) {
-    // console.log("err");
-}
-
 $(window).scroll(function () {
+    if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
+        $("#spopup").show("slow");
+    else $("#spopup").hide("slow");
+
     var dbRef = firebase.database().ref().child('stats');
     try {
         var hT = $('#numbers').offset().top,
@@ -362,7 +352,7 @@ $(window).scroll(function () {
     }
 });
 
-function listData(data) {
+function listDataMerchantPage(data) {
     window.stats = data.val();
 
     var i = 0;
@@ -396,31 +386,10 @@ function listData(data) {
     });
 }
 
-
-
-$(window).scroll(function () {
-    if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
-        $("#spopup").show("slow");
-    else $("#spopup").hide("slow");
-});
-
 function closeSPopup() {
     $('#spopup').hide('slow');
     hidePopUp = true;
 }
-
-$(document).on("click", function (e) {
-    var container = $("#navbar");
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if (
-            container.hasClass('navbar-collapse collapse show')
-        ) {
-            container.removeClass('show');
-        }
-    }
-
-});
 
 $(document).on("click", function (e) {
     var container = $("#navbar");
@@ -432,61 +401,5 @@ $(document).on("click", function (e) {
             container.removeClass('show');
         }
     }
-});
 
-$(document).ready(function () {
-    try {
-        var slideCount = $('.customer-logos > div').length;
-        var randomStart = Math.floor(Math.random() * slideCount);
-        $('.customer-logos').slick({
-            initialSlide: randomStart,
-            infinite: true,
-            lazyLoad: 'ondemand',
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            arrows: false,
-            dots: false,
-            accessibility: true,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }]
-        });
-        // $('.customerxxx-logos').slick({
-        //     initialSlide: randomStart,
-        //     infinite: true,
-        //     lazyLoad: 'ondemand',
-        //     slidesToShow: 12,
-        //     slidesToScroll: 1,
-        //     autoplay: true,
-        //     autoplaySpeed: 3000,
-        //     arrows: false,
-        //     dots: false,
-        //     accessibility: true,
-        //     pauseOnHover: false,
-        //     responsive: [{
-        //         breakpoint: 768,
-        //         settings: {
-        //             slidesToShow: 8
-        //         }
-        //     }, {
-        //         breakpoint: 520,
-        //         settings: {
-        //             slidesToShow: 6
-        //         }
-        //     }]
-        // });
-    } catch (err) {
-        // console.log("err");
-    }
 });
