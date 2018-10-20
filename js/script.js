@@ -330,16 +330,38 @@ $(function () {
 
 $(window).scroll(function () {
     var dbRef = firebase.database().ref().child('stats');
-    dbRef.on('value', listData1, null);
+    dbRef.on('value', listData, null);
 });
 
-function listData1(data) {
+function listData(data) {
     window.stats = data.val();
     try {
         var hT = $('#numbers').offset().top,
             hH = $('#numbers').outerHeight(),
             wH = $(window).height(),
             wS = $(this).scrollTop();
+
+        console.log("wS", wS);
+        // if(){
+        //     wS = 100;
+        // }
+
+        const mq = window.matchMedia("(min-width: 767px)");
+
+        if (matchMedia) {
+            const mq = window.matchMedia("(min-width: 500px)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+        }
+
+        function WidthChange(mq) {
+            if (mq.matches) {
+                console.log("true");
+            } else {
+                console.log("false");
+            }
+        }
+
         if (wS > (hT + hH - wH)) {
             var i = 0;
             $('.counter').each(function () {
