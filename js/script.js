@@ -328,6 +328,13 @@ $(function () {
 // }, 500);
 // });
 
+var hT = $('#numbers').offset().top,
+    hH = $('#numbers').outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+
+console.log("wSTest", wS > (hT + hH - wH));
+
 $(window).scroll(function () {
     var dbRef = firebase.database().ref().child('stats');
     try {
@@ -342,12 +349,9 @@ $(window).scroll(function () {
         }
     }
     catch (err) {
-        console.log("err", err);
+        // console.log("err", err);
     }
 
-    var wSTest = $(this).scrollTop();
-
-    console.log("wSTest", wSTest);
     // if(){
     //     wS = 100;
     // }
