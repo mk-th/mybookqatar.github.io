@@ -328,8 +328,6 @@ $(function () {
 // }, 500);
 // });
 
-var dbRef = firebase.database().ref().child('stats');
-
 $(window).scroll(function () {
     try {
         var hT = $('#numbers').offset().top,
