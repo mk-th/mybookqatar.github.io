@@ -36,7 +36,6 @@ $(document).ready(function () {
                 wH = $(window).height(),
                 wS = $(this).scrollTop();
 
-
             if (wS > (hT + hH - wH)) {
                 dbRef.on('value', listDataMerchantPage, null);
             }
