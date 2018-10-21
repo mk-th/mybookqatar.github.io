@@ -47,31 +47,31 @@ $(document).ready(function () {
     function listDataStats(data) {
         window.stats = data.val();
         try {
-            document.getElementsByClassName("totaloffersPlus").innerHTML = stats["totaloffersPlus"];
+            $(".totaloffersPlus").html(stats["totaloffersPlus"]);
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementsByClassName("totaloffers").innerHTML = stats["totaloffers"];
+            $(".totaloffers").html(stats["totaloffers"]);
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementsByClassName("totalmerchantsPlus").innerHTML = stats["totalmerchantsPlus"];
+            $(".totalmerchantsPlus").html(stats["totalmerchantsPlus"]);
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementsByClassName("totalmerchants").innerHTML = stats["totalmerchants"];
+            $(".totalmerchants").html(stats["totalmerchants"]);
         }
         catch (err) {
             // console.log("err");
         }
         try {
-            document.getElementsByClassName("totalsavings").innerHTML = stats["totalsavings"];
+            $(".totalsavings").html(stats["totalsavings"]);
         }
         catch (err) {
             // console.log("err");
