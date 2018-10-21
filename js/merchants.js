@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Initialize Firebase
-    var config = {
+    var newConfig = {
         apiKey: "AIzaSyArCQMJGfncTdxllXugahAapUH5UZqJh9I",
         authDomain: "mbqmerchstats.firebaseapp.com",
         databaseURL: "https://mbqmerchstats.firebaseio.com",
@@ -9,7 +9,8 @@ $(document).ready(function () {
         storageBucket: "mbqmerchstats.appspot.com",
         messagingSenderId: "117123414878"
     };
-    firebase.initializeApp(config);
+
+    firebase.initializeApp(newConfig);
 
     var dbRef = firebase.database().ref().child('stats');
     try {
