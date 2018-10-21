@@ -1435,6 +1435,9 @@ h3 {
 }
 
 @media only screen and (min-width: 992px) {
+    #logogs {
+        margin-top: -50px;
+    }
     #home {
         height: 76vh;
     }
@@ -1844,9 +1847,6 @@ h3 {
 @media (max-width: 991px) {
     .ahhhhhaagdx {
         margin-top: -30px;
-    }
-    #logogs {
-        margin-top: -50px;
     }
 }
 
