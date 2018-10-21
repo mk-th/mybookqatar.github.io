@@ -108,6 +108,31 @@ $(document).ready(function () {
         // console.log("err");
     }
 
+
+    $(window).scroll(function () {
+        console.log("1");
+
+        if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
+            $("#spopup").show("slow");
+        else $("#spopup").hide("slow");
+
+        try {
+            var hT = $('#numbers').offset().top,
+                hH = $('#numbers').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+
+            if (wS > (hT + hH - wH)) {
+                console.log("2");
+                var dbRef = firebase.database().ref().child('stats');
+                dbRef.on('value', listDataMerchantPage, null);
+            }
+        }
+        catch (err) {
+            // console.log("err");
+        }
+    });
+
     function listDataMerchantPage(data) {
         window.stats = data.val();
 
@@ -309,27 +334,6 @@ $(function () {
     }
 
 }); /* End Fn */
-
-$(window).scroll(function () {
-    if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
-        $("#spopup").show("slow");
-    else $("#spopup").hide("slow");
-
-    try {
-        var hT = $('#numbers').offset().top,
-            hH = $('#numbers').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-
-        if (wS > (hT + hH - wH)) {
-            var dbRef = firebase.database().ref().child('stats');
-            dbRef.on('value', listDataMerchantPage, null);
-        }
-    }
-    catch (err) {
-        // console.log("err");
-    }
-});
 
 function closeSPopup() {
     $('#spopup').hide('slow');
