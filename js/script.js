@@ -93,21 +93,6 @@ $(document).ready(function () {
         });
     }
 
-    var dbRef = firebase.database().ref().child('stats');
-    try {
-        var hT = $('#numbers').offset().top,
-            hH = $('#numbers').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-
-
-        if (wS > (hT + hH - wH)) {
-            dbRef.on('value', listDataMerchantPage, null);
-        }
-    }
-    catch (err) {
-        // console.log("err");
-    }
 
     try {
         var slideCount = $('.customer-logos > div').length;
@@ -280,57 +265,7 @@ $(window).scroll(function () {
     if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
         $("#spopup").show("slow");
     else $("#spopup").hide("slow");
-
-    var dbRef = firebase.database().ref().child('stats');
-    try {
-        var hT = $('#numbers').offset().top,
-            hH = $('#numbers').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-
-
-        if (wS > (hT + hH - wH)) {
-            dbRef.on('value', listDataMerchantPage, null);
-        }
-    }
-    catch (err) {
-        // console.log("err");
-    }
 });
-
-function listDataMerchantPage(data) {
-    window.stats = data.val();
-
-    var i = 0;
-    $('.counter').each(function () {
-        var $this = $(this);
-        if (i == 0) {
-            countTo = window.stats["totaloffers"];
-        } else if (i == 1) {
-            countTo = window.stats["totalmerchants"];
-        } else {
-            countTo = window.stats["totalsavings"];
-        }
-
-        $({
-            countNum: $this.text()
-        }).animate({
-            countNum: countTo
-        }, {
-                duration: 2000,
-                easing: 'linear',
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                    $this.text(this.countNum);
-                    //alert('finished');
-                }
-
-            });
-        i++;
-    });
-}
 
 function closeSPopup() {
     $('#spopup').hide('slow');
