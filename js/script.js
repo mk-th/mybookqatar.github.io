@@ -92,7 +92,6 @@ $(document).ready(function () {
         });
     }
 
-    var dbRef = firebase.database().ref().child('stats');
     try {
         var hT = $('#numbers').offset().top,
             hH = $('#numbers').outerHeight(),
@@ -101,13 +100,13 @@ $(document).ready(function () {
 
 
         if (wS > (hT + hH - wH)) {
+            var dbRef = firebase.database().ref().child('stats');
             dbRef.on('value', listDataMerchantPage, null);
         }
     }
     catch (err) {
         // console.log("err");
     }
-
 
     function listDataMerchantPage(data) {
         window.stats = data.val();
@@ -315,13 +314,7 @@ $(window).scroll(function () {
     if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
         $("#spopup").show("slow");
     else $("#spopup").hide("slow");
-});
 
-function closeSPopup() {
-    $('#spopup').hide('slow');
-    hidePopUp = true;
-
-    var dbRef = firebase.database().ref().child('stats');
     try {
         var hT = $('#numbers').offset().top,
             hH = $('#numbers').outerHeight(),
@@ -329,12 +322,18 @@ function closeSPopup() {
             wS = $(this).scrollTop();
 
         if (wS > (hT + hH - wH)) {
+            var dbRef = firebase.database().ref().child('stats');
             dbRef.on('value', listDataMerchantPage, null);
         }
     }
     catch (err) {
         // console.log("err");
     }
+});
+
+function closeSPopup() {
+    $('#spopup').hide('slow');
+    hidePopUp = true;
 }
 
 $(document).on("click", function (e) {
