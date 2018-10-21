@@ -31,7 +31,7 @@ $(document).ready(function () {
     }
 
     // Initialize Firebase
-    var config = {
+    var merchStatsConfig1 = {
         apiKey: "AIzaSyArCQMJGfncTdxllXugahAapUH5UZqJh9I",
         authDomain: "mbqmerchstats.firebaseapp.com",
         databaseURL: "https://mbqmerchstats.firebaseio.com",
@@ -39,7 +39,7 @@ $(document).ready(function () {
         storageBucket: "mbqmerchstats.appspot.com",
         messagingSenderId: "117123414878"
     };
-    firebase.initializeApp(config);
+    firebase.initializeApp(merchStatsConfig1);
 
     var dbRef = firebase.database().ref().child('stats');
     dbRef.on('value', listDataStats, null);
