@@ -110,8 +110,6 @@ $(document).ready(function () {
 
 
     $(window).scroll(function () {
-        console.log("1");
-
         if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
             $("#spopup").show("slow");
         else $("#spopup").hide("slow");
@@ -123,7 +121,6 @@ $(document).ready(function () {
                 wS = $(this).scrollTop();
 
             if (wS > (hT + hH - wH)) {
-                console.log("2");
                 var dbRef = firebase.database().ref().child('stats');
                 dbRef.on('value', listDataMerchantPage, null);
             }
