@@ -256,8 +256,6 @@ $(document).ready(function () {
         $("#results").html("");
         var obj = Object.keys(data);
 
-        console.log("disaster obj.length", obj.length);
-
         for (var k = 0; k < obj.length; k++) {
             var listMerch = data[obj[k]];
             var keysMerch = Object.keys(listMerch);
