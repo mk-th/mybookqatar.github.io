@@ -204,11 +204,18 @@ $(function () {
      * FIXED  MENU - HEADER
      *-----------------------------------*/
     function menuscroll() {
-        var $navmenu = $('.nav-menu');
-        if ($(window).scrollTop() > 50) {
-            $navmenu.addClass('is-scrolling');
-        } else {
+        if ($(window).width() <= 991) {
+            var $navmenu = $('.nav-menu');
             $navmenu.removeClass("is-scrolling");
+        }
+
+        if ($(window).width() >= 992) {
+            var $navmenu = $('.nav-menu');
+            if ($(window).scrollTop() > 50) {
+                $navmenu.addClass('is-scrolling');
+            } else {
+                $navmenu.removeClass("is-scrolling");
+            }
         }
     }
     menuscroll();
