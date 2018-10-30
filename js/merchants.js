@@ -47,26 +47,26 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas") {
+                if (data[3] === "Beauty & Spas" && data[0] === "2018 Published") {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks") {
+                } else if (data[3] === "Food & Drinks" && data[0] === "2018 Published") {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
                 }
-                else if (data[3] === "Health & Fitness") {
+                else if (data[3] === "Health & Fitness" && data[0] === "2018 Published") {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
                 }
-                else if (data[3] === "Pleasure & Leisure") {
+                else if (data[3] === "Pleasure & Leisure" && data[0] === "2018 Published") {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
                 }
-                else if (data[3] === "Services & Retail") {
+                else if (data[3] === "Services & Retail" && data[0] === "2018 Published") {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
                 }
-                else if (data[3] === "Staycations") {
+                else if (data[3] === "Staycations" && data[0] === "2018 Published") {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
@@ -114,26 +114,26 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas") {
+                if (data[3] === "Beauty & Spas" && data[0] === "2018 Published") {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks") {
+                } else if (data[3] === "Food & Drinks" && data[0] === "2018 Published") {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
                 }
-                else if (data[3] === "Health & Fitness") {
+                else if (data[3] === "Health & Fitness" && data[0] === "2018 Published") {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
                 }
-                else if (data[3] === "Pleasure & Leisure") {
+                else if (data[3] === "Pleasure & Leisure" && data[0] === "2018 Published") {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
                 }
-                else if (data[3] === "Services & Retail") {
+                else if (data[3] === "Services & Retail" && data[0] === "2018 Published") {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
                 }
-                else if (data[3] === "Staycations") {
+                else if (data[3] === "Staycations" && data[0] === "2018 Published") {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
