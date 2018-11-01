@@ -47,6 +47,28 @@ $(document).ready(function () {
     function listDataStats(data) {
         window.stats = data.val();
         try {
+            if (stats["earlybirdStatus"] == true) {
+                $('#navbar .nav-link').each(function () {
+                    if ($(this).html() == '<img class="xgddga1" src="images/loader.webp" alt="Loading...">') {
+                        $(this).html("2019 🔥");
+                        $(this).attr("href", "shop-2019.html");
+                    }
+                });
+            }
+
+            if (stats["earlybirdStatus"] == false) {
+                $('#navbar .nav-link').each(function () {
+                    if ($(this).html() == '<img class="xgddga1" src="images/loader.webp" alt="Loading...">') {
+                        $(this).html("PRICING");
+                        $(this).attr("href", "buy-my-book.html");
+                    }
+                });
+            }
+        }
+        catch (err) {
+            // console.log("err");
+        }
+        try {
             $(".totaloffersPlus").html(stats["totaloffersPlus"]);
         }
         catch (err) {

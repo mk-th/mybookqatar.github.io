@@ -7,7 +7,7 @@ Version : 1.0
 Author  : My Book Qatar, Colorlib
 URI     : https://colorlib.com
 
- -->
+-->
 
 <head>
     <title>Buy - My Book Qatar</title>
@@ -58,36 +58,7 @@ URI     : https://colorlib.com
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
-    <script src="js/script.js"></script>
-    <script type="text/javascript">
-        // Initialize Firebase
-        var merchStatsConfig1 = {
-            apiKey: "AIzaSyArCQMJGfncTdxllXugahAapUH5UZqJh9I",
-            authDomain: "mbqmerchstats.firebaseapp.com",
-            databaseURL: "https://mbqmerchstats.firebaseio.com",
-            projectId: "mbqmerchstats",
-            storageBucket: "mbqmerchstats.appspot.com",
-            messagingSenderId: "117123414878"
-        };
-        firebase.initializeApp(merchStatsConfig1);
-
-        var dbRef = firebase.database().ref().child('stats');
-        dbRef.on('value', listDataStats, null);
-
-        function listDataStats(data) {
-            try {
-                if (data.val()["earlybirdStatus"] == true) {
-                    window.location = "shop-2019.html";
-                }
-            }
-            catch (err) {
-                console.log("err");
-            }
-        }
-    </script>
-
     <!-- Load Facebook SDK for JavaScript -->
-
     <script>
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -243,7 +214,7 @@ URI     : https://colorlib.com
                                     <a class="nav-link" href="how-to-use.html">HOW TO USE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="buy-my-book.html">PRICING</a>
+                                    <a class="nav-link active" href="buy-my-book.html"><img class="xgddga1" src="images/loader.webp" alt="Loading..."></a>
                                     <span class="sr-only">(current)</span>
                                 </li>
                                 <li class="nav-item">
@@ -476,6 +447,7 @@ URI     : https://colorlib.com
     <!-- Plugins JS -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
