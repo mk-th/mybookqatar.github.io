@@ -56,7 +56,7 @@ URI     : https://colorlib.com
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
     <!-- Facebook Pixel Code -->
-    <script>
+    <!-- <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
@@ -70,17 +70,46 @@ URI     : https://colorlib.com
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '162541567890039');
         fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=162541567890039&ev=PageView&noscript=1" /></noscript>
+    </script> -->
+    <!-- <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=162541567890039&ev=PageView&noscript=1" /></noscript> -->
     <!-- End Facebook Pixel Code -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
-    <script>
+    <!-- <script>
         fbq('track', 'ViewContent');
-    </script>
+    </script> -->
 
     <!-- Load Facebook SDK for JavaScript -->
+
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+        // Initialize Firebase
+        var merchStatsConfig1 = {
+            apiKey: "AIzaSyArCQMJGfncTdxllXugahAapUH5UZqJh9I",
+            authDomain: "mbqmerchstats.firebaseapp.com",
+            databaseURL: "https://mbqmerchstats.firebaseio.com",
+            projectId: "mbqmerchstats",
+            storageBucket: "mbqmerchstats.appspot.com",
+            messagingSenderId: "117123414878"
+        };
+        firebase.initializeApp(merchStatsConfig1);
+
+        var dbRef = firebase.database().ref().child('stats');
+        dbRef.on('value', listDataStats, null);
+
+        function listDataStats(data) {
+            try {
+                if (data.val()["earlybirdStatus"] == false) {
+                    window.location = "buy-my-book.html";
+                }
+            }
+            catch (err) {
+                console.log("err");
+            }
+        }
+    </script>
 
     <script>
         (function (d, s, id) {
