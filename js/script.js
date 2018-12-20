@@ -47,55 +47,35 @@ $(document).ready(function () {
     function listDataStats(data) {
         window.stats = data.val();
         try {
-            if (stats["earlybirdStatus"] == true) {
-                $('#navbar .nav-link').each(function () {
-                    if ($(this).html() == '<img class="xgddga1" src="images/loader.webp" alt="Loading...">') {
-                        $(this).html("2019 🔥");
-                        $(this).attr("href", "shop-2019.html");
-                    }
-                });
+            if (stats["onlineStatus"] != true) {
+                document.write(stats["onlineMessage"]);
             }
-
-            if (stats["earlybirdStatus"] == false) {
-                $('#navbar .nav-link').each(function () {
-                    if ($(this).html() == '<img class="xgddga1" src="images/loader.webp" alt="Loading...">') {
-                        $(this).html("PRICING");
-                        $(this).attr("href", "buy-my-book.html");
-                    }
-                });
-            }
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
         try {
             $(".totaloffersPlus").html(stats["totaloffersPlus"]);
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
         try {
             $(".totaloffers").html(stats["totaloffers"]);
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
         try {
             $(".totalmerchantsPlus").html(stats["totalmerchantsPlus"]);
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
         try {
             $(".totalmerchants").html(stats["totalmerchants"]);
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
         try {
             $(".totalsavings").html(stats["totalsavings"]);
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
 
@@ -103,8 +83,8 @@ $(document).ready(function () {
         $('.counter').each(function () {
             if (i == 0) {
                 this.innerHTML = window.stats["totaloffers"] - 100;
-            } else if (i == 1) {
-                this.innerHTML = window.stats["totalmerchants"] - 50;
+                // } else if (i == 1) {
+                //     this.innerHTML = window.stats["totalmerchants"] - 50;
             } else {
                 this.innerHTML = window.stats["totalsavings"] - 10000;
             }
@@ -125,8 +105,7 @@ $(document).ready(function () {
             var dbRef = firebase.database().ref().child('stats');
             dbRef.on('value', listDataMerchantPage, null);
         }
-    }
-    catch (err) {
+    } catch (err) {
         // console.log("err");
     }
 
@@ -146,8 +125,7 @@ $(document).ready(function () {
                 var dbRef = firebase.database().ref().child('stats');
                 dbRef.on('value', listDataMerchantPage, null);
             }
-        }
-        catch (err) {
+        } catch (err) {
             // console.log("err");
         }
     });
@@ -160,8 +138,8 @@ $(document).ready(function () {
             var $this = $(this);
             if (i == 0) {
                 countTo = window.stats["totaloffers"];
-            } else if (i == 1) {
-                countTo = window.stats["totalmerchants"];
+                // } else if (i == 1) {
+                //     countTo = window.stats["totalmerchants"];
             } else {
                 countTo = window.stats["totalsavings"];
             }
@@ -171,17 +149,17 @@ $(document).ready(function () {
             }).animate({
                 countNum: countTo
             }, {
-                    duration: 2000,
-                    easing: 'linear',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $this.text(this.countNum);
-                        //alert('finished');
-                    }
+                duration: 2000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                }
 
-                });
+            });
             i++;
         });
     }
