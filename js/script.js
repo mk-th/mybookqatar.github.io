@@ -100,7 +100,6 @@ $(document).ready(function () {
             wH = $(window).height(),
             wS = $(this).scrollTop();
 
-
         if (wS > (hT + hH - wH)) {
             var dbRef = firebase.database().ref().child('stats');
             dbRef.on('value', listDataMerchantPage, null);
