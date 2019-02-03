@@ -1,5 +1,6 @@
 $(document).ready(function () {
     window.dbRef;
+    alert(1);
 
     $.ajax({
         type: "GET",
@@ -48,10 +49,9 @@ $(document).ready(function () {
         var svc = {};
         var stc = {};
 
-        console.log("s", data);
-
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
+            console.log("s", data);
             if (data.length == headers.length) {
                 if (data[3] === "Beauty & Spas" && data[0] === "2019 Confirmed") {
                     catg["beau"] = setMerchant(beau, data, b);
