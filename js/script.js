@@ -83,8 +83,8 @@ $(document).ready(function () {
         $('.counter').each(function () {
             if (i == 0) {
                 this.innerHTML = window.stats["totaloffers"] - 100;
-                } else if (i == 1) {
-                    this.innerHTML = window.stats["totalmerchants"] - 50;
+            } else if (i == 1) {
+                this.innerHTML = window.stats["totalmerchants"] - 50;
             } else {
                 this.innerHTML = window.stats["totalsavings"] - 10000;
             }
@@ -137,8 +137,8 @@ $(document).ready(function () {
             var $this = $(this);
             if (i == 0) {
                 countTo = window.stats["totaloffers"];
-                } else if (i == 1) {
-                    countTo = window.stats["totalmerchants"];
+            } else if (i == 1) {
+                countTo = window.stats["totalmerchants"];
             } else {
                 countTo = window.stats["totalsavings"];
             }

@@ -5,7 +5,9 @@ $(document).ready(function () {
         type: "GET",
         url: unescape('%68%74%74%70%73%3a%2f%2f%64%6f%63%73%2e%67%6f%6f%67%6c%65%2e%63%6f%6d%2f%73%70%72%65%61%64%73%68%65%65%74%73%2f%64%2f%65%2f%32%50%41%43%58%2d%31%76%51%31%56%39%57%74%70%75%57%36%46%53%64%6e%2d%68%69%49%5a%33%47%68%4e%66%39%46%54%69%59%58%73%5a%6b%57%39%73%30%59%50%32%68%6d%2d%63%63%44%65%44%36%64%36%65%70%6c%6f%73%6b%73%4c%46%5a%30%50%4d%4e%46%46%4a%6e%55%50%64%61%72%6e%4b%65%61%2f%70%75%62%3f%67%69%64%3d%36%33%38%38%39%34%36%38%30%26%73%69%6e%67%6c%65%3d%74%72%75%65%26%6f%75%74%70%75%74%3d%63%73%76'),
         dataType: "text",
-        success: function (data) { processAndPostData(data); }
+        success: function (data) {
+            processAndPostData(data);
+        }
     });
 
     function callAjaxWOPostData() {
@@ -13,7 +15,9 @@ $(document).ready(function () {
             type: "GET",
             url: unescape('%68%74%74%70%73%3a%2f%2f%64%6f%63%73%2e%67%6f%6f%67%6c%65%2e%63%6f%6d%2f%73%70%72%65%61%64%73%68%65%65%74%73%2f%64%2f%65%2f%32%50%41%43%58%2d%31%76%51%31%56%39%57%74%70%75%57%36%46%53%64%6e%2d%68%69%49%5a%33%47%68%4e%66%39%46%54%69%59%58%73%5a%6b%57%39%73%30%59%50%32%68%6d%2d%63%63%44%65%44%36%64%36%65%70%6c%6f%73%6b%73%4c%46%5a%30%50%4d%4e%46%46%4a%6e%55%50%64%61%72%6e%4b%65%61%2f%70%75%62%3f%67%69%64%3d%36%33%38%38%39%34%36%38%30%26%73%69%6e%67%6c%65%3d%74%72%75%65%26%6f%75%74%70%75%74%3d%63%73%76'),
             dataType: "text",
-            success: function (data) { processData(data); }
+            success: function (data) {
+                processData(data);
+            }
         });
     }
 
@@ -44,6 +48,8 @@ $(document).ready(function () {
         var svc = {};
         var stc = {};
 
+        console.log("s", data);
+
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
@@ -53,20 +59,16 @@ $(document).ready(function () {
                 } else if (data[3] === "Food & Drinks" && data[0] === "2019 Confirmed") {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                }
-                else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                }
-                else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                }
-                else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                }
-                else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
@@ -120,20 +122,16 @@ $(document).ready(function () {
                 } else if (data[3] === "Food & Drinks" && data[0] === "2019 Confirmed") {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                }
-                else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                }
-                else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                }
-                else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                }
-                else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
@@ -157,11 +155,9 @@ $(document).ready(function () {
         var json = [];
         for (var k = 4; k < 15; k++) {
             if (data[k] != "") {
-                json.push(
-                    {
-                        "title": data[k]
-                    }
-                );
+                json.push({
+                    "title": data[k]
+                });
             }
         }
         return json;
