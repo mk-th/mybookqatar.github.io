@@ -52,22 +52,22 @@ $(document).ready(function () {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
 
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas" && data[0] === "2019 Confirmed") {
+                if (data[3] === "Beauty & Spas" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Food & Drinks" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                } else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Health & Fitness" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                } else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Pleasure & Leisure" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                } else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Services & Retail" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                } else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Staycations" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
@@ -115,22 +115,22 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas" && data[0] === "2019 Confirmed") {
+                if (data[3] === "Beauty & Spas" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Food & Drinks" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                } else if (data[3] === "Health & Fitness" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Health & Fitness" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                } else if (data[3] === "Pleasure & Leisure" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Pleasure & Leisure" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                } else if (data[3] === "Services & Retail" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Services & Retail" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                } else if (data[3] === "Staycations" && data[0] === "2019 Confirmed") {
+                } else if (data[3] === "Staycations" && (data[0] === "2019 Confirmed" || data[0] === "2019 Confirmed**")) {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
