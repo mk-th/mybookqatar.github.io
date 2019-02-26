@@ -12,8 +12,6 @@ $(document).ready(function () {
         }
     });
 
-    alert(stats["lomLink"]);
-
     function callAjaxWOPostData() {
         $.ajax({
             type: "GET",
