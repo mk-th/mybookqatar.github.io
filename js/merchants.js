@@ -115,8 +115,8 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
-                
-                if (data[0] !== "2019 Alive On App") {
+
+                if (data[0] !== "2019 Alive On App" && data[0] !== "2019 Alive, No Contract") {
                     console.log(data[0]);
                 }
 
