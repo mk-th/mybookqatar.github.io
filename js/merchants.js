@@ -54,22 +54,22 @@ $(document).ready(function () {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
 
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                if (data[4] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Food & Drinks" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                } else if (data[3] === "Health & Fitness" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Health & Fitness" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                } else if (data[3] === "Pleasure & Leisure" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Pleasure & Leisure" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                } else if (data[3] === "Services & Retail" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Services & Retail" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                } else if (data[3] === "Staycations" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Staycations" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
@@ -117,22 +117,22 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
-                if (data[3] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                if (data[4] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
-                } else if (data[3] === "Food & Drinks" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Food & Drinks" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["food"] = setMerchant(food, data, f);
                     f++;
-                } else if (data[3] === "Health & Fitness" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Health & Fitness" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["heal"] = setMerchant(heal, data, h);
                     h++;
-                } else if (data[3] === "Pleasure & Leisure" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Pleasure & Leisure" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["plea"] = setMerchant(plea, data, p);
                     p++;
-                } else if (data[3] === "Services & Retail" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Services & Retail" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["svc"] = setMerchant(svc, data, r);
                     r++;
-                } else if (data[3] === "Staycations" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
+                } else if (data[4] === "Staycations" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["stc"] = setMerchant(stc, data, s);
                     s++;
                 }
