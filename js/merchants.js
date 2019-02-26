@@ -152,7 +152,7 @@ $(document).ready(function () {
 
     function setOffer(data) {
         var json = [];
-        for (var k = 4; k < 15; k++) {
+        for (var k = 5; k < 16; k++) {
             if (data[k] != "") {
                 json.push({
                     "title": data[k]
