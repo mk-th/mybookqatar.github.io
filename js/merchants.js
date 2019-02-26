@@ -115,6 +115,11 @@ $(document).ready(function () {
         for (var i = 1; i < allTextLines.length; i++) {
             var data = allTextLines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/);
             if (data.length == headers.length) {
+                
+                if (data[0] !== "2019 Alive On App") {
+                    console.log(data[0]);
+                }
+
                 if (data[4] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
                     catg["beau"] = setMerchant(beau, data, b);
                     b++;
