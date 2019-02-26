@@ -144,7 +144,7 @@ $(document).ready(function () {
 
     function setMerchant(merch, data, j) {
         merch[j] = {
-            "name": data[2],
+            "name": data[3],
             "offers": setOffer(data)
         };
         return merch;
