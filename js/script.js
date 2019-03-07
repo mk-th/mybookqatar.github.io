@@ -1,8 +1,11 @@
 var hidePopUp = false;
 
 $(document).ready(function () {
-    window.onresize = videoResize;
-    window.onresize = videoZAZZResize;
+    try {
+        window.onresize = videoResize;
+    } catch (err) { //We can also throw from try block and catch it here
+        // console.log("err");
+    }
 
     function videoResize() {
         if ($(window).width() <= 991) {
@@ -32,6 +35,8 @@ $(document).ready(function () {
     }
 
     try {
+        window.onresize = videoZAZZResize;
+
         function videoZAZZResize() {
             if ($(window).width() <= 991) {
                 $("#how-to-join-lnk").attr("href", "#how-to-join-mb")
