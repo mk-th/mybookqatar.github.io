@@ -2,11 +2,12 @@ var hidePopUp = false;
 
 $(document).ready(function () {
     window.onresize = videoResize;
+    window.onresize = videoZAZZResize;
 
     function videoResize() {
         if ($(window).width() <= 991) {
             $("#fb-root").html(null);
-            $("#spopup").html(null);
+            // $("#spopup").html(null);
             try {
                 var videoFile = 'videos/bg-portrait.mp4';
                 $('#myvid source').attr('src', videoFile);
@@ -29,6 +30,8 @@ $(document).ready(function () {
             }
         }
     }
+
+    videoZAZZResize();
 
     // Initialize Firebase
     var merchStatsConfig1 = {
@@ -110,9 +113,9 @@ $(document).ready(function () {
 
 
     $(window).scroll(function () {
-        if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
-            $("#spopup").show("slow");
-        else $("#spopup").hide("slow");
+        // if ($(document).scrollTop() >= $(document).height() / 5 && !hidePopUp)
+        //     $("#spopup").show("slow");
+        // else $("#spopup").hide("slow");
 
         try {
             var hT = $('#numbers').offset().top,
