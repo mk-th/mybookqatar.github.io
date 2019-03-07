@@ -31,7 +31,22 @@ $(document).ready(function () {
         }
     }
 
-    videoZAZZResize();
+    try {
+        function videoZAZZResize() {
+            if ($(window).width() <= 991) {
+                $("#how-to-join-lnk").attr("href", "#how-to-join-mb")
+                $("#how-to-redeem-lnk").attr("href", "#how-to-redeem-mb")
+            }
+
+            if ($(window).width() >= 992) {
+                $("#how-to-join-lnk").attr("href", "#how-to-join-mn")
+                $("#how-to-redeem-lnk").attr("href", "#how-to-redeem-mn")
+            }
+        }
+    } catch (err) { //We can also throw from try block and catch it here
+        // console.log("err");
+    }
+
 
     // Initialize Firebase
     var merchStatsConfig1 = {
