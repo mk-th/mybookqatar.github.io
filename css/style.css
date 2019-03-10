@@ -2057,14 +2057,14 @@ body {
 .goog-te-gadget-simple {
     border-radius: 25px;
     border: 1px solid #AAAAAA;
-    height: 25px;
     display: inline !important;
-    width: 20px;
 }
 
 .goog-te-menu-value {
     padding-top: 0 !important;
     font-size: 12px;
     font-family: 'Quicksand', sans-serif;
-    width: auto;
+    width: auto !important;
 }
+
+/* .goog-te-gadget img {} */
