@@ -45,6 +45,7 @@ URI     : https://colorlib.com
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     </link>
+
     <!-- Themify Icons -->
     <!-- <link rel="stylesheet" href="css/themify-icons.css"></link> -->
     <!-- Owl carousel -->
@@ -54,7 +55,13 @@ URI     : https://colorlib.com
     </link>
 
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/fe4d484917a9f71d680e3f8d6/9d2673d0075f5f7da5daf7b33.js");</script>
+    <script id="mcjs">
+        ! function (c, h, i, m, p) {
+            m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(
+                m, p)
+        }(document, "script",
+            "https://chimpstatic.com/mcjs-connected/js/users/fe4d484917a9f71d680e3f8d6/9d2673d0075f5f7da5daf7b33.js");
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -129,6 +136,42 @@ URI     : https://colorlib.com
                 <div class="row">
                     <div class="col-5">
                         <ul class="nav social_icon">
+                            <li>
+                                <div id="google_translate_element"></div>
+
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({
+                                            pageLanguage: 'en'
+                                        }, 'google_translate_element');
+                                    }
+                                </script>
+
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+                                <div id="google_translate_element"></div>
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({
+                                            pageLanguage: 'en',
+                                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                        }, 'google_translate_element');
+                                    }
+                                </script>
+                                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                <script>
+                                    $(document).ready(function(){
+                                    $('#google_translate_element').bind('DOMNodeInserted', function(event) {
+                                      $('.goog-te-menu-value span:first').html('Translate');
+                                      $('.goog-te-menu-frame.skiptranslate').load(function(){
+                                        setTimeout(function(){
+                                          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Translate');    
+                                        }, 100);
+                                      });
+                                    });
+                                  });
+                                </script>
+                            </li>
                             <li>
                                 <a href="https://itunes.apple.com/mz/app/mybook-qatar/id978034937?mt=8" style="padding-top: 0 !important;"
                                     target="_blank">
@@ -241,7 +284,6 @@ URI     : https://colorlib.com
             <source src="videos/bg-landscape.mp4" type="video/mp4" />
         </video>
 
-        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <script>
             if ($(window).width() <= 991) {
                 var videoFile = 'videos/bg-portrait.mp4';
@@ -770,6 +812,8 @@ URI     : https://colorlib.com
     <!-- <script src="js/owl.carousel.min.js"></script> -->
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+
+    <link href=" css/flag-icon.min.css" rel="stylesheet">
 </body>
 
 </html>
