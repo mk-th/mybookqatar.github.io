@@ -260,6 +260,9 @@ URI     : https://colorlib.com
                             <script>
                                 $(document).ready(function () {
                                         $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+                                            if( $('.goog-te-menu-value span:first').html()!="Select Language"){
+                                                return;
+                                            }
                                             $('.goog-te-menu-value span:first').html(
                                                 '<i class="fa fa-language"></i>');
                                             $('.goog-te-menu-frame.skiptranslate').load(function () {
