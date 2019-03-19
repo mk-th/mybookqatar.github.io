@@ -7,9 +7,9 @@ $(document).ready(function () {
 
     function listDataStats(data) {
         window.stats = data.val();
+        console.log("2", window.stats);
     }
 
-    console.log("2", unescape(stats["lomLink"]));
 
     try {
         $.ajax({
