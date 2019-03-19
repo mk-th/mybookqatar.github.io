@@ -248,28 +248,23 @@ URI     : https://colorlib.com
 
                             <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
                             <script>
-                                // $(document).ready(function () {
-                                    alert("13");
-                                    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
-                                        try {
+                                $(document).ready(function () {
+                                    // $('#google_translate_element').bind('DOMNodeInserted', function (event) {
                                             $('.goog-te-menu-value span:first').html(
-                                                'en | عر');
-                                        } catch (err) {
-                                            console.log("err", err);
-                                        }
-                                        // $('.goog-te-menu-frame.skiptranslate').load(function () {
-                                        //     setTimeout(function () {
-                                        //         $(
-                                        //             '.goog-te-menu-frame.skiptranslate'
-                                        //         ).contents().find(
-                                        //             '.goog-te-menu2-item-selected .text'
-                                        //         ).html(
-                                        //             '<i class="fa fa-language"></i>'
-                                        //         );
-                                        //     }, 100);
-                                        // });
-                                    });
-                                // });
+                                                '<i class="fa fa-language"></i>');
+                                        $('.goog-te-menu-frame.skiptranslate').load(function () {
+                                            setTimeout(function () {
+                                                $(
+                                                    '.goog-te-menu-frame.skiptranslate'
+                                                ).contents().find(
+                                                    '.goog-te-menu2-item-selected .text'
+                                                ).html(
+                                                    '<i class="fa fa-language"></i>'
+                                                );
+                                            }, 100);
+                                        });
+                                    // });
+                                });
                             </script>
                         </div>
 
