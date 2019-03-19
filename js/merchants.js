@@ -9,7 +9,7 @@ $(document).ready(function () {
         window.stats = data.val();
     }
 
-    console.log("2");
+    console.log("2", unescape(stats["lomLink"]));
 
     try {
         $.ajax({
