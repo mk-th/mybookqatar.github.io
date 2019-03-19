@@ -7,22 +7,23 @@ $(document).ready(function () {
 
     function listDataStats(data) {
         window.stats = data.val();
-        console.log("2", window.stats);
+        console.log("2", stats["lomLink"]);
+        try {
+            $.ajax({
+                type: "GET",
+                url: unescape(stats["lomLink"]),
+                dataType: "text",
+                success: function (data) {
+                    processAndPostData(data);
+                }
+            });
+        } catch (err) {
+            // console.log("err");
+        }
     }
 
 
-    try {
-        $.ajax({
-            type: "GET",
-            url: unescape(stats["lomLink"]),
-            dataType: "text",
-            success: function (data) {
-                processAndPostData(data);
-            }
-        });
-    } catch (err) {
-        // console.log("err");
-    }
+
 
     function callAjaxWOPostData() {
         try {
