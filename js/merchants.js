@@ -117,7 +117,7 @@ $(document).ready(function () {
             if (data.length == headers.length) {
 
                 if (data[4] === "Beauty & Spas") {
-                    if (data[0] === "2019 Alive, No Contract") {
+                    if (data[0] === "2019 Alive No Contract") {
                         alert(data[3]);
                     }
                     if (data[0] !== "2019 Alive On App") {
