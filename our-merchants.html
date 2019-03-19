@@ -249,7 +249,6 @@ URI     : https://colorlib.com
                             <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
                             <script>
                                 $(document).ready(function () {
-                                   try{
                                     $('#google_translate_element').bind('DOMNodeInserted', function (event) {
                                             $('.goog-te-menu-value span:first').html(
                                                 '<i class="fa fa-language"></i>');
@@ -264,10 +263,8 @@ URI     : https://colorlib.com
                                                 );
                                             }, 100);
                                         });
+                                        return;
                                     });
-                                   }catch(err){
-                                       alert("as");
-                                   }
                                 });
                             </script>
                         </div>
