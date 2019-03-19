@@ -118,6 +118,8 @@ $(document).ready(function () {
 
                 if (data[4] === "Beauty & Spas" && data[0] === "2019 Alive, No Contract") {
                     alert(data[3]);
+                }else{
+                    console.log("asa");
                 }
 
                 if (data[4] === "Beauty & Spas" && (data[0] === "2019 Alive On App" || data[0] === "2019 Alive, No Contract")) {
