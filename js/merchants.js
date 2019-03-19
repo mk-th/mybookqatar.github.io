@@ -117,7 +117,6 @@ $(document).ready(function () {
             if (data.length == headers.length) {
 
                 if (data[4] === "Beauty & Spas" && data[0] === "2019 Alive, No Contract") {
-                    console.log(data[0]);
                     alert(data[3]);
                 }
 
