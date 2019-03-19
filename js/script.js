@@ -70,13 +70,6 @@ $(document).ready(function () {
     function listDataStats(data) {
         window.stats = data.val();
         try {
-            if (stats["onlineStatus"] != true) {
-                document.write(stats["onlineMessage"]);
-            }
-        } catch (err) {
-            // console.log("err");
-        }
-        try {
             $(".totaloffersPlus").html(stats["totaloffersPlus"]);
         } catch (err) {
             // console.log("err");
