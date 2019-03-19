@@ -249,13 +249,13 @@ URI     : https://colorlib.com
                             <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
                             <script>
                                 $(document).ready(function () {
-                                    alert("asas");
+                                    alert("yay");
                                     $('#google_translate_element').bind('DOMNodeInserted', function (event) {
                                         try {
                                             $('.goog-te-menu-value span:first').html(
                                                 '<i class="fa fa-language"></i>');
                                         } catch (err) {
-                                            // console.log("err");
+                                            console.log("err", err);
                                         }
                                         $('.goog-te-menu-frame.skiptranslate').load(function () {
                                             setTimeout(function () {
