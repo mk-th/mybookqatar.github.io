@@ -1,5 +1,6 @@
 $(document).ready(function () {
     window.dbRef;
+    console.log("1");
 
     var dbRef = firebase.database().ref().child('stats');
     dbRef.on('value', listDataStats, null);
@@ -8,7 +9,7 @@ $(document).ready(function () {
         window.stats = data.val();
     }
 
-    console.log("dfdf");
+    console.log("2");
 
     try {
         $.ajax({
