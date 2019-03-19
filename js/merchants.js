@@ -15,7 +15,6 @@ $(document).ready(function () {
     }
 
     function callAjaxWOPostData() {
-
         try {
             $.ajax({
                 type: "GET",
