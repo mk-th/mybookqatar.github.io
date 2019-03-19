@@ -1,9 +1,6 @@
 $(document).ready(function () {
     window.dbRef;
 
-    // Initialize Firebase
-    firebase.initializeApp(merchStatsConfig1);
-
     var dbRef = firebase.database().ref().child('stats');
     dbRef.on('value', listDataStats, null);
 
