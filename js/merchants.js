@@ -242,22 +242,22 @@ $(document).ready(function () {
 
         itemArray = result;
 
-        var res = "";
-        res += '<div class="maaga" id="' + name + '">';
-        for (var i = 0; i < itemArray.length; i++) {
-            res += '<span class="accordion-toggle gaga"> ' + itemArray[i].name;
-            res += '<img src="images/closed.png" alt="Closed Icon" height="4px" class="accordion-icon"> </span>';
-            res += '<div class="accordion-content">';
-            var listOffers = itemArray[i].offers;
-            var keysOffers = Object.keys(listOffers);
-            for (var j = 0; j < keysOffers.length; j++) {
-                var kO = keysOffers[j];
-                res += '<span class="ruru">' + listOffers[kO].title + '</span>';
-            }
-            res += '</div>';
-        }
-        res += '</div>';
-        $("#results").append(res);
+        // var res = "";
+        // res += '<div class="maaga" id="' + name + '">';
+        // for (var i = 0; i < itemArray.length; i++) {
+        //     res += '<span class="accordion-toggle gaga"> ' + itemArray[i].name;
+        //     res += '<img src="images/closed.png" alt="Closed Icon" height="4px" class="accordion-icon"> </span>';
+        //     res += '<div class="accordion-content">';
+        //     var listOffers = itemArray[i].offers;
+        //     var keysOffers = Object.keys(listOffers);
+        //     for (var j = 0; j < keysOffers.length; j++) {
+        //         var kO = keysOffers[j];
+        //         res += '<span class="ruru">' + listOffers[kO].title + '</span>';
+        //     }
+        //     res += '</div>';
+        // }
+        // res += '</div>';
+        // $("#results").append(res);
     }
 
     String.prototype.removeAccents = function () {
