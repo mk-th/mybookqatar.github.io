@@ -19,6 +19,7 @@ $(document).ready(function () {
         window.stats = data.val();
     }
 
+    console.log("dfdf");
 
     try {
         $.ajax({
