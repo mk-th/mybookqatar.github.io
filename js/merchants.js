@@ -1,13 +1,12 @@
 $(document).ready(function () {
     window.dbRef;
-    console.log("1");
 
     var dbRef = firebase.database().ref().child('stats');
     dbRef.on('value', listDataStats, null);
 
     function listDataStats(data) {
         window.stats = data.val();
-        console.log("2", stats["lomLink"]);
+
         try {
             $.ajax({
                 type: "GET",
@@ -21,9 +20,6 @@ $(document).ready(function () {
             // console.log("err");
         }
     }
-
-
-
 
     function callAjaxWOPostData() {
         try {
