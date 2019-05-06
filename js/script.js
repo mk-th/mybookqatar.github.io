@@ -75,6 +75,11 @@ $(document).ready(function () {
             // console.log("err");
         }
         try {
+            $(".appPrice").html(stats["appPrice"]);
+        } catch (err) {
+            // console.log("err");
+        }
+        try {
             $(".totaloffers").html(stats["totaloffers"]);
         } catch (err) {
             // console.log("err");
