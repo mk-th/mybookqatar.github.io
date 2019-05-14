@@ -1,8 +1,32 @@
-<script>
-window.onload = function() {
-    // similar behavior as clicking on a link
-    window.location.href = "http://onelink.to/ramadanoffers";
-}
-</script>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126698872-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-<!-- add analytics code here -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126698872-2');
+    </script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            // similar behavior as clicking on a link
+            window.location.href = "http://onelink.to/ramadanoffers";
+        }
+    </script>
+
+    <script>
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://68.183.233.247/mtc.js','mt');
+    
+        mt('send', 'pageview');
+    </script>
+</body>
